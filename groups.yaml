@@ -1,0 +1,32 @@
+#    default_view: 
+#        view: yes
+#        entities: scene.good_night, group.internet, sun.sun
+        
+    Home Office: sensor.aeotec_zw100_multisensor_6_alarm_level_6, sensor.aeotec_zw100_multisensor_6_alarm_type_6, sensor.aeotec_zw100_multisensor_6_burglar_6, sensor.aeotec_zw100_multisensor_6_luminance_6, sensor.aeotec_zw100_multisensor_6_relative_humidity_6, sensor.aeotec_zw100_multisensor_6_sourcenodeid_6, sensor.aeotec_zw100_multisensor_6_temperature_6, sensor.aeotec_zw100_multisensor_6_ultraviolet_6, binary_sensor.aeotec_zw100_multisensor_6_sensor_6
+
+    Family Room: light.ge_unknown_type5044_id3031_level_3, light.ge_12724_3way_dimmer_switch_level_7, media_player.roku_6325a8184086
+    
+    Master Bedroom: light.ge_12724_3way_dimmer_switch_level_9
+    
+    Back Porch: light.ge_12724_3way_dimmer_switch_level_10
+
+    Front Porch: light.ge_12724_3way_dimmer_switch_level_4
+    
+    Upstairs Hall: light.upstairs_hall_level_8
+
+    Upstairs:
+        view: yes
+        entities: group.Home_Office, group.upstairs_hall
+        
+    Downstairs:
+        view: yes
+        entities: group.Family_Room, group.front_porch, group.master_bedroon, group.back_porch, group.garage
+    
+    Test:
+       view: yes
+       entities: switch.__switch_2, switch.__switch_5
+       
+    Garage: media_player.garage
+    
+    Internet: sensor.speedtest_ping, sensor.speedtest_download, sensor.speedtest_upload
+

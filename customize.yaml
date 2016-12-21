@@ -1,0 +1,46 @@
+    light.ge_unknown_type5044_id3031_level_3:
+        friendly_name: "Lamp"
+        emulated_hue: true
+        emulated_hue_name: "living room lamp"
+    light.upstairs_hall_level_8:
+        friendly_name: Recessed Lighting
+        emulated_hue: true
+        emulated_hue_name: "upstairs hall"
+    light.ge_12724_3way_dimmer_switch_level_10:
+        friendly_name: Recessed Lighting
+    light.ge_12724_3way_dimmer_switch_level_4:
+        friendly_name: Recessed Lighting
+    light.ge_12724_3way_dimmer_switch_level_7:
+        friendly_name: Hall
+    light.ge_12724_3way_dimmer_switch_level_9:
+        friendly_name: Recessed Lighting
+    media_player.roku_6325a8184086:
+        friendly_name: 'Living Room Roku'
+    sensor.aeotec_zw100_multisensor_6_temperature_6:
+        friendly_name: "Office Temperature"
+    sensor.aeotec_zw100_multisensor_6_luminance_6:
+        friendly_name: "Office Luminance"
+        icon: mdi:white-balance-incandescent
+    sensor.aeotec_zw100_multisensor_6_relative_humidity_6:
+        friendly_name: "Office Humidity"
+    sensor.aeotec_zw100_multisensor_6_sourcenodeid_6:
+        friendly_name: "Office Node Id"
+        hidden: true
+    sensor.aeotec_zw100_multisensor_6_ultraviolet_6:
+        friendly_name: "Office Ultraviolet"
+    sensor.speedtest_download:
+       friendly_name: 'Download'
+       icon: mdi:speedometer
+    sensor.speedtest_upload:
+       friendly_name: 'Upload'
+       icon: mdi:speedometer
+#    sensor.speedtest_ping:
+#       friendly_name: 'Ping'
+#       icon: mdi:speedometer
+    device_tracker.192168029:
+       friendly_name: 'Mike'
+    device_tracker.192168055:
+       friendly_name: 'Denise'
+    device_tracker.192168028:
+       friendly_name: 'Shawn'
+    

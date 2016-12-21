@@ -1,0 +1,100 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret latitude_loc_home
+  longitude: !secret longitude_loc_home
+  # Impacts weather/sunrise data
+  elevation: 0
+  
+  # C for Celsius, F for Fahrenheit
+  temperature_unit: F
+  
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: America/Indiana/Indianapolis
+  customize: !include customize.yaml
+
+http:
+  cors_allowed_origins:
+    - 192.168.0.44
+    - http://localhost
+    - http://localhost:4201
+    - http://localhost:3000
+    - home-assistant.io
+
+mqtt:
+  broker: 192.168.0.27
+  port: 1883
+  client_id: home-assistant-1
+  username: !secret mqtt_user
+  password: !secret mqtt_password
+  
+zwave:
+  usb_path: /dev/ttyUSB0
+  config_path: /usr/local/lib/python3.4/dist-packages/libopenzwave-0.3.1-py3.4-linux-armv7l.egg/config
+  polling_interval: 3000
+  customize:
+    light.upstairs_hall_level_8:
+        polling_intensity: 1
+    light.ge_unknown_type5044_id3031_level_3:
+        polling_intensity: 1
+    light.ge_12724_3way_dimmer_switch_level_10:
+        polling_intensity: 1
+    light.ge_12724_3way_dimmer_switch_level_4:
+        polling_intensity: 1
+    light.ge_12724_3way_dimmer_switch_level_7:
+        polling_intensity: 1
+    light.ge_12724_3way_dimmer_switch_level_9:
+        polling_intensity: 1
+
+##############
+#  Includes  #
+##############
+
+# Devices #
+#alexa: !include alexa.yaml
+group: !include groups.yaml
+device_tracker: !include device_trackers.yaml
+media_player: !include media_players.yaml
+sensor: !include sensors.yaml
+light: !include lights.yaml
+scene: !include scenes.yaml
+automation: !include automation.yaml
+
+##############
+#  Enables   #
+##############
+logger:
+history:
+# Discover some devices automatically
+discovery:
+sun:
+# Allows you to issue voice commands from the frontend
+conversation:
+# View all events in a logbook
+logbook:
+# Enables the frontend
+frontend:
+# Checks for available updates
+updater:
+# Record
+recorder:
+  purge_days: 30
+
+emulated_hue:
+  host_ip: 192.168.0.27
+  listen_port: 8300
+  off_maps_to_on_domains:
+    - script
+    - scene
+  expose_by_default: false
+  exposed_domains:
+    - light
+    - switch
+
+
+
+
+
+
+

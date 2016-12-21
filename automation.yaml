@@ -1,0 +1,9 @@
+####SUN BASED####
+- !include automation/automation1.yaml
+- !include automation/automation2.yaml
+
+####TIME BASED####
+- !include automation/automation3.yaml
+- !include automation/automation4.yaml
+- !include automation/automation5.yaml
+- !include automation/automation6.yaml

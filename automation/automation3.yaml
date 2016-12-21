@@ -1,0 +1,8 @@
+  trigger:
+    platform: time
+    # When 'after' is used, you cannot also match on hour, minute, seconds.
+    # Military time format.
+    after: '17:00:00'
+  action:
+    service: homeassistant.turn_on
+    entity_id: light.ge_unknown_type5044_id3031_level_3
