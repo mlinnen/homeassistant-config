@@ -2,17 +2,25 @@
 #        view: yes
 #        entities: scene.good_night, group.internet, sun.sun
         
-    Home Office: sensor.aeotec_zw100_multisensor_6_alarm_level_6, sensor.aeotec_zw100_multisensor_6_alarm_type_6, sensor.aeotec_zw100_multisensor_6_burglar_6, sensor.aeotec_zw100_multisensor_6_luminance_6, sensor.aeotec_zw100_multisensor_6_relative_humidity_6, sensor.aeotec_zw100_multisensor_6_sourcenodeid_6, sensor.aeotec_zw100_multisensor_6_temperature_6, sensor.aeotec_zw100_multisensor_6_ultraviolet_6, binary_sensor.aeotec_zw100_multisensor_6_sensor_6
+    Family Room: light.ge_unknown_type5044_id3031_level_3_0, light.ge_12724_3way_dimmer_switch_level_7_0, media_player.roku_6325a8184086
+    
+    Master Bedroom: light.ge_12724_3way_dimmer_switch_level_9_0
+    
+    Back Porch: 
+      - light.ge_12724_3way_dimmer_switch_level_10_0
+      - sensor.aeotec_zw100_multisensor_6_alarm_level_6_1
+      - sensor.aeotec_zw100_multisensor_6_alarm_type_6_0
+      - sensor.aeotec_zw100_multisensor_6_burglar_6_10
+      - sensor.aeotec_zw100_multisensor_6_luminance_6_3
+      - sensor.aeotec_zw100_multisensor_6_relative_humidity_6_5
+      - sensor.aeotec_zw100_multisensor_6_sourcenodeid_6_2
+      - sensor.aeotec_zw100_multisensor_6_temperature_6_1
+      - sensor.aeotec_zw100_multisensor_6_ultraviolet_6_27
+      - binary_sensor.aeotec_zw100_multisensor_6_sensor_6_0
 
-    Family Room: light.ge_unknown_type5044_id3031_level_3, light.ge_12724_3way_dimmer_switch_level_7, media_player.roku_6325a8184086
+    Front Porch: light.ge_12724_3way_dimmer_switch_level_4_0
     
-    Master Bedroom: light.ge_12724_3way_dimmer_switch_level_9
-    
-    Back Porch: light.ge_12724_3way_dimmer_switch_level_10
-
-    Front Porch: light.ge_12724_3way_dimmer_switch_level_4
-    
-    Upstairs Hall: light.upstairs_hall_level_8
+    Upstairs Hall: light.ge_12724_3way_dimmer_switch_level_8_0
 
     Upstairs:
         view: yes

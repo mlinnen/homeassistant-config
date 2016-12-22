@@ -1,10 +1,8 @@
 # Weather Prediction
-sensor:
-   platform: yr
+- platform: yr
 
 # Internet Speed Test
-  platform: speedtest
-  monitored_conditions:
-#    - ping
-    - download
-    - upload
+#- platform: speedtest
+#  monitored_conditions:
+#    - download
+#    - upload

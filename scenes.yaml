@@ -1,7 +1,7 @@
   - name: Good Night
     entities:
-      light.ge_12724_3way_dimmer_switch_level_10: off
-      light.ge_unknown_type5044_id3031_level_3: off
-      light.upstairs_hall_level_8: off
-      light.ge_12724_3way_dimmer_switch_level_7: off
-      light.ge_12724_3way_dimmer_switch_level_9: off
+      light.ge_12724_3way_dimmer_switch_level_10_0: off
+      light.ge_unknown_type5044_id3031_level_3_0: off
+      light.ge_12724_3way_dimmer_switch_level_8_0: off
+      light.ge_12724_3way_dimmer_switch_level_7_0: off
+      light.ge_12724_3way_dimmer_switch_level_9_0: off

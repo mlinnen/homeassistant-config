@@ -5,4 +5,4 @@
     after: '23:59:00'
   action:
     service: homeassistant.turn_off
-    entity_id: light.ge_unknown_type5044_id3031_level_3
+    entity_id: light.ge_unknown_type5044_id3031_level_3_0
