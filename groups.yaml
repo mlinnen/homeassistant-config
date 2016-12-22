@@ -1,7 +1,18 @@
-#    default_view: 
-#        view: yes
-#        entities: scene.good_night, group.internet, sun.sun
+    default_view: 
+        view: yes
+        entities: 
+          - scene.good_night
+          - group.internet
+          - sun.sun
         
+    Lights: 
+        view: yes
+        entities: 
+          - group.front_porch
+          - group.upstairs_hall
+          - group.master_bedroom
+          - group.family_room
+
     Family Room: 
       - light.ge_unknown_type5044_id3031_level_3_0
       - light.ge_12724_3way_dimmer_switch_level_7_0
