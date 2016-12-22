@@ -14,20 +14,21 @@ homeassistant:
   time_zone: America/Indiana/Indianapolis
   customize: !include customize.yaml
 
-#http:
-#  cors_allowed_origins:
-#    - 192.168.0.44
-#    - http://localhost
-#    - http://localhost:4201
-#    - http://localhost:3000
-#    - home-assistant.io
+http:
+  api_password: !secret api_password
+  cors_allowed_origins:
+    - 192.168.0.44
+    - http://localhost
+    - http://localhost:4201
+    - http://localhost:3000
+    - home-assistant.io
 
-#mqtt:
-#  broker: 192.168.0.27
-#  port: 1883
-#  client_id: home-assistant-1
-#  username: !secret mqtt_user
-#  password: !secret mqtt_password
+mqtt:
+  broker: 192.168.0.27
+  port: 1883
+  client_id: home-assistant-1
+  username: !secret mqtt_user
+  password: !secret mqtt_password
   
 zwave:
   usb_path: /dev/ttyUSB0
