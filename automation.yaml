@@ -1,9 +1,9 @@
 ####SUN BASED####
-- !include automation/automation1.yaml
-- !include automation/automation2.yaml
+- !include automation/sunset_frontporch.yaml
+- !include automation/sunrise_frontporch.yaml
 
 ####TIME BASED####
-- !include automation/automation3.yaml
-- !include automation/automation4.yaml
-- !include automation/automation5.yaml
-- !include automation/automation6.yaml
+- !include automation/time_evening_couchlamp_off.yaml
+- !include automation/time_evening_couchlamp_on.yaml
+- !include automation/time_morning_couchlamp_off.yaml
+- !include automation/time_morning_couchlamp_on.yaml

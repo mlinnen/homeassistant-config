@@ -2,9 +2,13 @@
 #        view: yes
 #        entities: scene.good_night, group.internet, sun.sun
         
-    Family Room: light.ge_unknown_type5044_id3031_level_3_0, light.ge_12724_3way_dimmer_switch_level_7_0, media_player.roku_6325a8184086
+    Family Room: 
+      - light.ge_unknown_type5044_id3031_level_3_0
+      - light.ge_12724_3way_dimmer_switch_level_7_0
+      - media_player.roku_6325a8184086
     
-    Master Bedroom: light.ge_12724_3way_dimmer_switch_level_9_0
+    Master Bedroom: 
+      - light.ge_12724_3way_dimmer_switch_level_9_0
     
     Back Porch: 
       - light.ge_12724_3way_dimmer_switch_level_10_0
@@ -18,23 +22,36 @@
       - sensor.aeotec_zw100_multisensor_6_ultraviolet_6_27
       - binary_sensor.aeotec_zw100_multisensor_6_sensor_6_0
 
-    Front Porch: light.ge_12724_3way_dimmer_switch_level_4_0
+    Front Porch: 
+      - light.ge_12724_3way_dimmer_switch_level_4_0
     
-    Upstairs Hall: light.ge_12724_3way_dimmer_switch_level_8_0
+    Upstairs Hall: 
+      - light.ge_12724_3way_dimmer_switch_level_8_0
 
     Upstairs:
         view: yes
-        entities: group.Home_Office, group.upstairs_hall
+        entities: 
+          - group.Home_Office
+          - group.upstairs_hall
         
     Downstairs:
         view: yes
-        entities: group.Family_Room, group.front_porch, group.master_bedroon, group.back_porch, group.garage
+        entities: 
+          - group.Family_Room
+          - group.front_porch
+          - group.master_bedroon
+          - group.back_porch
+          - group.garage
     
     Test:
        view: yes
        entities: switch.__switch_2, switch.__switch_5
        
-    Garage: media_player.garage
+    Garage: 
+      - media_player.garage
     
-    Internet: sensor.speedtest_ping, sensor.speedtest_download, sensor.speedtest_upload
+    Internet: 
+      - sensor.speedtest_ping
+      - sensor.speedtest_download
+      - sensor.speedtest_upload
 

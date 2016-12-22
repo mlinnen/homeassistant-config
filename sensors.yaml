@@ -2,7 +2,7 @@
 - platform: yr
 
 # Internet Speed Test
-#- platform: speedtest
-#  monitored_conditions:
-#    - download
-#    - upload
+- platform: speedtest
+  monitored_conditions:
+    - download
+    - upload

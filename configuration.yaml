@@ -54,7 +54,7 @@ zwave:
 # Devices #
 #alexa: !include alexa.yaml
 group: !include groups.yaml
-#device_tracker: !include device_trackers.yaml
+device_tracker: !include device_trackers.yaml
 media_player: !include media_players.yaml
 sensor: !include sensors.yaml
 light: !include lights.yaml
