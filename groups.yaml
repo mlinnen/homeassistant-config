@@ -12,6 +12,7 @@
           - group.upstairs_hall_lights
           - group.master_bedroom_lights
           - group.family_room_lights
+          - group.back_porch_lights
 
     Family Room:
         view: yes
@@ -22,7 +23,7 @@
 
     Family Room Lights: 
       - light.__level_3_0
-      - light.ge_12724_3way_dimmer_switch_level_7_0
+      - light.ge_12724_3way_dimmer_switch_level_14_0
       - light.fireplace_left
       - light.fireplace_right
 
@@ -40,9 +41,10 @@
         entities: 
           - media_player.patio
           - group.back_porch_sensors
+          - group.back_porch_lights
 
     Back Porch Lights:
-      - light.ge_12724_3way_dimmer_switch_level_10_0
+      - light.ge_12724_3way_dimmer_switch_level_13_0
 
     Back Porch Sensors: 
       - sensor.aeotec_zw100_multisensor_6_alarm_level_6_1
@@ -59,7 +61,7 @@
       - light.__level_4_0
     
     Upstairs Hall Lights: 
-      - light.ge_12724_3way_dimmer_switch_level_8_0
+      - light.ge_12724_3way_dimmer_switch_level_12_0
 
     Upstairs:
         view: yes
