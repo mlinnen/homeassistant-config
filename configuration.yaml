@@ -7,8 +7,7 @@ homeassistant:
   # Impacts weather/sunrise data
   elevation: 0
   
-  # C for Celsius, F for Fahrenheit
-  temperature_unit: F
+  unit_system: imperial
   
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: America/Indiana/Indianapolis
@@ -34,19 +33,19 @@ zwave:
   usb_path: /dev/ttyUSB0
   config_path: /usr/local/lib/python3.4/dist-packages/libopenzwave-0.3.1-py3.4-linux-armv7l.egg/config
   polling_interval: 3000
-  customize:
-    light.ge_12724_3way_dimmer_switch_level_8_0:
-        polling_intensity: 1
-    light.ge_unknown_type5044_id3031_level_3_0:
-        polling_intensity: 1
-    light.ge_12724_3way_dimmer_switch_level_10_0:
-        polling_intensity: 1
-    light.ge_12724_3way_dimmer_switch_level_4_0:
-        polling_intensity: 1
-    light.ge_12724_3way_dimmer_switch_level_7_0:
-        polling_intensity: 1
-    light.ge_12724_3way_dimmer_switch_level_9_0:
-        polling_intensity: 1
+#  customize:
+#    light.ge_12724_3way_dimmer_switch_level_8_0:
+#        polling_intensity: 1
+#    light.ge_unknown_type5044_id3031_level_3_0:
+#        polling_intensity: 1
+#    light.ge_12724_3way_dimmer_switch_level_10_0:
+#        polling_intensity: 1
+#    light.ge_12724_3way_dimmer_switch_level_4_0:
+#        polling_intensity: 1
+#    light.ge_12724_3way_dimmer_switch_level_7_0:
+#        polling_intensity: 1
+#    light.ge_12724_3way_dimmer_switch_level_9_0:
+#        polling_intensity: 1
 
 ##############
 #  Includes  #

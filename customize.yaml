@@ -1,4 +1,5 @@
-    light.ge_unknown_type5044_id3031_level_3_0:
+    #light.ge_unknown_type5044_id3031_level_3_0:
+    light.__level_3_0:
         friendly_name: "Lamp"
         emulated_hue: true
         emulated_hue_name: "living room lamp"
@@ -8,14 +9,14 @@
         emulated_hue_name: "upstairs hall"
     light.ge_12724_3way_dimmer_switch_level_10_0:
         friendly_name: Recessed Lighting
-    light.ge_12724_3way_dimmer_switch_level_4_0:
+    #light.ge_12724_3way_dimmer_switch_level_4_0:
+    light.__level_4_0:
         friendly_name: Recessed Lighting
     light.ge_12724_3way_dimmer_switch_level_7_0:
         friendly_name: Hall
-    light.ge_12724_3way_dimmer_switch_level_9_0:
+    #light.ge_12724_3way_dimmer_switch_level_9_0:
+    light.__level_9_0:
         friendly_name: Recessed Lighting
-    media_player.roku_6325a8184086:
-        friendly_name: 'Living Room Roku'
     sensor.aeotec_zw100_multisensor_6_temperature_6_1:
         friendly_name: "Multi Sensor Temperature"
     sensor.aeotec_zw100_multisensor_6_alarm_type_6_0:
@@ -49,4 +50,14 @@
        friendly_name: 'Denise'
     device_tracker.192168028:
        friendly_name: 'Shawn'
-    
+
+    media_player.roku_6325a8184086:
+        friendly_name: 'Living Room Roku'
+    media_player.roku_5y259x086201:
+        friendly_name: 'Bed Room Roku'
+    media_player.patio:
+        friendly_name: 'Patio Audio'
+    media_player.garage:
+        friendly_name: 'Garage Audio'
+    media_player.directv_rid025227814974:
+        friendly_name: 'DirectTV Family'

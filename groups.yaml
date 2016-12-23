@@ -1,28 +1,50 @@
-    default_view: 
-        view: yes
-        entities: 
-          - scene.good_night
-          - group.internet
-          - sun.sun
+    #default_view: 
+    #    view: yes
+    #    entities: 
+    #      - scene.good_night
+    #      - group.internet
+    #      - sun.sun
         
     Lights: 
         view: yes
         entities: 
-          - group.front_porch
-          - group.upstairs_hall
-          - group.master_bedroom
-          - group.family_room
+          - group.front_porch_lights
+          - group.upstairs_hall_lights
+          - group.master_bedroom_lights
+          - group.family_room_lights
 
-    Family Room: 
-      - light.ge_unknown_type5044_id3031_level_3_0
+    Family Room:
+        view: yes
+        entities: 
+          - group.family_room_lights
+          - media_player.roku_6325a8184086
+          - media_player.directv_rid025227814974
+
+    Family Room Lights: 
+      - light.__level_3_0
       - light.ge_12724_3way_dimmer_switch_level_7_0
-      - media_player.roku_6325a8184086
-    
-    Master Bedroom: 
-      - light.ge_12724_3way_dimmer_switch_level_9_0
-    
+      - light.fireplace_left
+      - light.fireplace_right
+
+    Master Bedroom:
+        view: yes
+        entities: 
+          - group.master_bedroom_lights
+          - media_player.roku_5y259x086201
+
+    Master Bedroom Lights: 
+      - light.__level_9_0
+
     Back Porch: 
+        view: yes
+        entities: 
+          - media_player.patio
+          - group.back_porch_sensors
+
+    Back Porch Lights:
       - light.ge_12724_3way_dimmer_switch_level_10_0
+
+    Back Porch Sensors: 
       - sensor.aeotec_zw100_multisensor_6_alarm_level_6_1
       - sensor.aeotec_zw100_multisensor_6_alarm_type_6_0
       - sensor.aeotec_zw100_multisensor_6_burglar_6_10
@@ -33,33 +55,34 @@
       - sensor.aeotec_zw100_multisensor_6_ultraviolet_6_27
       - binary_sensor.aeotec_zw100_multisensor_6_sensor_6_0
 
-    Front Porch: 
-      - light.ge_12724_3way_dimmer_switch_level_4_0
+    Front Porch Lights: 
+      - light.__level_4_0
     
-    Upstairs Hall: 
+    Upstairs Hall Lights: 
       - light.ge_12724_3way_dimmer_switch_level_8_0
 
     Upstairs:
         view: yes
         entities: 
-          - group.Home_Office
-          - group.upstairs_hall
-        
+          - group.upstairs_hall_lights
+
     Downstairs:
         view: yes
         entities: 
-          - group.Family_Room
-          - group.front_porch
-          - group.master_bedroon
-          - group.back_porch
-          - group.garage
-    
-    Test:
-       view: yes
-       entities: switch.__switch_2, switch.__switch_5
-       
+          - group.family_room_lights
+          - group.front_porch_lights
+          - group.master_bedroom_lights
+          - group.back_porch_lights
+          - media_player.garage
+          - media_player.roku_5y259x086201
+          - media_player.roku_6325a8184086
+          - media_player.directv_rid025227814974
+          - media_player.patio
+
     Garage: 
-      - media_player.garage
+        view: yes
+        entities: 
+          - media_player.garage
     
     Internet: 
       - sensor.speedtest_ping
