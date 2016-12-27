@@ -34,6 +34,11 @@ zwave:
   config_path: /usr/local/lib/python3.4/dist-packages/libopenzwave-0.3.1-py3.4-linux-armv7l.egg/config
   polling_interval: 3000
 
+alarm_control_panel:
+  platform: alarmdotcom
+  username: !secret alarmcom_username
+  password: !secret alarmcom_password
+
 ##############
 #  Includes  #
 ##############
