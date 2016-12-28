@@ -6,3 +6,11 @@
   monitored_conditions:
     - download
     - upload
+
+- platform: systemmonitor
+  resources:
+    - type: disk_free
+      arg: /home
+    - type: memory_free
+    - type: processor_use
+    - type: last_boot

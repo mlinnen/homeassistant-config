@@ -91,3 +91,16 @@
       - sensor.speedtest_download
       - sensor.speedtest_upload
 
+    ha_status:
+      name: HA Controls
+      view: yes
+      entities:
+        - group.home_assistant_status
+        - group.internet
+
+    Home Assistant Status:
+      - script.restart_ha
+      - sensor.cpu_use
+      - sensor.ram_free
+      - sensor.disk_free_home
+      - sensor.last_boot
