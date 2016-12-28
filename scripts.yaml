@@ -1,0 +1,2 @@
+#### Notifications ####
+restart_ha: !include scripts/restart_ha.yaml

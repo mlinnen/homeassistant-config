@@ -58,3 +58,8 @@
         friendly_name: 'Garage Audio'
     media_player.directv_rid025227814974:
         friendly_name: 'DirectTV Family'
+
+#### Scripts ####
+    script.restart_ha:
+        icon: mdi:power
+        friendly_name: "Restart Home Assistant"

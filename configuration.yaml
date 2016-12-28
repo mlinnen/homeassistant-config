@@ -52,6 +52,9 @@ sensor: !include sensors.yaml
 light: !include lights.yaml
 scene: !include scenes.yaml
 automation: !include automation.yaml
+notify: !include notify.yaml
+script: !include scripts.yaml
+shell_command: !include shell_commands.yaml
 
 ##############
 #  Enables   #
