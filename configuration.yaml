@@ -5,13 +5,20 @@ homeassistant:
   latitude: !secret latitude_loc_home
   longitude: !secret longitude_loc_home
   # Impacts weather/sunrise data
-  elevation: 0
+  elevation: !secret elevation_loc_home
   
   unit_system: imperial
   
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: America/Indiana/Indianapolis
   customize: !include customize.yaml
+
+zone:
+  name: Home
+  latitude: !secret latitude_loc_home
+  longitude: !secret longitude_loc_home
+  radius: 60
+  icon: mdi:account-multiple
 
 http:
   api_password: !secret api_password
@@ -77,15 +84,15 @@ recorder:
   purge_days: 30
 
 emulated_hue:
-  host_ip: 192.168.0.27
-  listen_port: 8300
-  off_maps_to_on_domains:
-    - script
-    - scene
-  expose_by_default: false
-  exposed_domains:
-    - light
-    - switch
+#  host_ip: 192.168.0.27
+#  listen_port: 8300
+#  off_maps_to_on_domains:
+#    - script
+#    - scene
+#  expose_by_default: false
+#  exposed_domains:
+#    - light
+#    - switch
 
 
 
