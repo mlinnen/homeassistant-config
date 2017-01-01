@@ -22,8 +22,8 @@
           - media_player.directv_rid025227814974
 
     Family Room Lights: 
-      - light.__level_3_0
-      - light.ge_12724_3way_dimmer_switch_level_14_0
+      - light.couch_lamp_level_3_0
+      - light.downstairs_hall_level_14_0
       - light.fireplace_left
       - light.fireplace_right
 
@@ -44,7 +44,7 @@
           - group.back_porch_lights
 
     Back Porch Lights:
-      - light.ge_12724_3way_dimmer_switch_level_13_0
+      - light.back_porch_level_13_0
 
     Back Porch Sensors: 
       - sensor.aeotec_zw100_multisensor_6_alarm_level_6_1
@@ -58,10 +58,10 @@
       - binary_sensor.aeotec_zw100_multisensor_6_sensor_6_0
 
     Front Porch Lights: 
-      - light.__level_4_0
+      - light.front_porch_level_4_0
     
     Upstairs Hall Lights: 
-      - light.ge_12724_3way_dimmer_switch_level_12_0
+      - light.upstairs_hall_level_12_0
 
     Upstairs:
         view: yes

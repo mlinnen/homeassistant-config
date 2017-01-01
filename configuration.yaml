@@ -30,16 +30,16 @@ http:
     - home-assistant.io
 
 mqtt:
-#  broker: 192.168.0.27
-#  port: 1883
-#  client_id: home-assistant-1
-#  username: !secret mqtt_user
-#  password: !secret mqtt_password
+  broker: 127.0.0.1
+  port: 1883
+  client_id: home-assistant-1
+  username: pi
+  password: raspberry
   
 zwave:
   usb_path: /dev/ttyUSB0
-  config_path: /usr/local/lib/python3.4/dist-packages/libopenzwave-0.3.1-py3.4-linux-armv7l.egg/config
-  polling_interval: 3000
+  config_path: /srv/homeassistant/homeassistant_venv/lib/python3.4/site-packages/libopenzwave-0.3.1-py3.4-linux-armv7l.egg/config
+  polling_interval: 60000
 
 alarm_control_panel:
   platform: alarmdotcom
@@ -84,17 +84,20 @@ recorder:
   purge_days: 30
 
 emulated_hue:
-#  host_ip: 192.168.0.27
+#  host_ip: 192.168.0.25
 #  listen_port: 8300
 #  off_maps_to_on_domains:
 #    - script
 #    - scene
-#  expose_by_default: false
+#  type: alexa
+  expose_by_default: false
 #  exposed_domains:
 #    - light
 #    - switch
 
-
+# Text to speech
+tts:
+  platform: google
 
 
 

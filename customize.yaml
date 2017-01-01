@@ -1,19 +1,22 @@
-    light.__level_3_0:
-        friendly_name: "Lamp"
+    light.couch_lamp_level_3_0:
+        friendly_name: "Couch Lamp"
         emulated_hue: true
-        emulated_hue_name: "living room lamp"
-    light.ge_12724_3way_dimmer_switch_level_12_0:
-        friendly_name: Recessed Lighting
+        emulated_hue_name: "Couch Lamp"
+    light.front_porch_level_4_0:
+        friendly_name: "Front Porch Lights"
+    light.upstairs_hall_level_12_0:
+        friendly_name: "Upstairs Hall Lights"
         emulated_hue: true
-        emulated_hue_name: "upstairs hall"
-    light.ge_12724_3way_dimmer_switch_level_13_0:
-        friendly_name: Recessed Lighting
-    light.__level_4_0:
-        friendly_name: Recessed Lighting
-    light.ge_12724_3way_dimmer_switch_level_14_0:
-        friendly_name: Hall
-    light.__level_9_0:
-        friendly_name: Recessed Lighting
+        emulated_hue_name: "Upstairs Hall Lights"
+    light.back_porch_level_13_0:
+        friendly_name: "Back Porch Lights"
+        emulated_hue: true
+        emulated_hue_name: "Back Porch Lights"
+    light.downstairs_hall_level_14_0:
+        friendly_name: "Downstairs Hall Lights"
+    light.master_sitting_level_9_0:
+        friendly_name: "Master Sitting Lights"
+    
     sensor.aeotec_zw100_multisensor_6_temperature_6_1:
         friendly_name: "Multi Sensor Temperature"
     sensor.aeotec_zw100_multisensor_6_alarm_type_6_0:
