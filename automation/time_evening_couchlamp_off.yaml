@@ -1,8 +1,0 @@
-  trigger:
-    platform: time
-    # When 'after' is used, you cannot also match on hour, minute, seconds.
-    # Military time format.
-    after: '23:59:00'
-  action:
-    service: homeassistant.turn_off
-    entity_id: light.couch_lamp_level_3_0

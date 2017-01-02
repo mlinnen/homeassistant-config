@@ -1,7 +1,0 @@
-  trigger:
-    platform: sun
-    event: sunset
-    offset: "00:15:00"
-  action:
-    service: homeassistant.turn_on
-    entity_id: group.front_porch_lights
