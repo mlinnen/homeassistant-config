@@ -52,7 +52,7 @@ alarm_control_panel:
 
 # Devices #
 #alexa: !include alexa.yaml
-group: !include groups.yaml
+group: !include_dir_merge_named group
 device_tracker: !include device_trackers.yaml
 media_player: !include media_players.yaml
 sensor: !include sensors.yaml

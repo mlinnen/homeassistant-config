@@ -1,0 +1,23 @@
+Family Room Lights: 
+  entities: 
+    - light.couch_lamp_level_3_0
+    - light.downstairs_hall_level_14_0
+    - light.fireplace_left
+    - light.fireplace_right
+
+Master Bedroom Lights: 
+  entities: 
+    - light.master_sitting_level_9_0
+
+Back Porch Lights:
+  entities: 
+    - light.back_porch_level_13_0
+
+Front Porch Lights: 
+  entities: 
+    - light.front_porch_level_4_0
+
+Upstairs Hall Lights: 
+  entities: 
+    - light.upstairs_hall_level_12_0
+

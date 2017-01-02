@@ -1,0 +1,41 @@
+#default_view: 
+#    view: yes
+#    entities: 
+#      - scene.good_night
+#      - group.internet
+#      - sun.sun
+    
+Lights: 
+  view: yes
+  entities: 
+    - group.front_porch_lights
+    - group.upstairs_hall_lights
+    - group.master_bedroom_lights
+    - group.family_room_lights
+    - group.back_porch_lights
+
+Upstairs:
+  view: yes
+  entities: 
+    - group.upstairs_hall_lights
+
+Downstairs:
+  view: yes
+  entities: 
+    - group.family_room_lights
+    - group.front_porch_lights
+    - group.master_bedroom_lights
+    - group.back_porch_lights
+    - media_player.garage
+    - media_player.roku_5y259x086201
+    - media_player.roku_6325a8184086
+    - media_player.directv_rid025227814974
+    - media_player.patio
+
+ha_status:
+  name: HA Controls
+  view: yes
+  entities:
+    - group.home_assistant_status
+    - group.internet
+

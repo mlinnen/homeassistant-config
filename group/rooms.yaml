@@ -1,0 +1,21 @@
+Master Bedroom:
+  entities: 
+    - group.master_bedroom_lights
+    - media_player.roku_5y259x086201
+
+Back Porch: 
+  entities: 
+    - media_player.patio
+    - group.back_porch_sensors
+    - group.back_porch_lights
+
+Garage: 
+  entities: 
+    - media_player.garage
+
+Family Room:
+  entities: 
+    - group.family_room_lights
+    - media_player.roku_6325a8184086
+    - media_player.directv_rid025227814974
+
