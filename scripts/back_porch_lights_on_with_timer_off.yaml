@@ -1,0 +1,15 @@
+  back_porch_lights_on_with_timer_off:
+    alias: "Turn on back porch lights and set timer"
+    sequence:
+      # Cancel ev. old timers
+      - service: script.back_porch_lights_timer_off
+        data:
+           entity_id: script.timer_off
+      - service: light.turn_on
+        data:
+          entity_id: group.back_porch_lights
+      # Set new timer
+      - service: script.turn_on
+        data:
+          entity_id: script.back_porch_lights_timer_off
+

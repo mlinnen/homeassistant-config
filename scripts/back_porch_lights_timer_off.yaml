@@ -1,0 +1,8 @@
+  back_porch_lights_timer_off:
+    alias: "Turn off back porch lights after 10 minutes"
+    sequence:
+      - delay:
+          minutes: 10
+      - service: light.turn_off
+        data:
+          entity_id: group.back_porch_lights
