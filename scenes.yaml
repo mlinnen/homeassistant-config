@@ -4,3 +4,11 @@
       group.family_room_lights: off
       group.master_bedroom_lights: off
       group.upstairs_hall_lights: off
+
+  - name: All Lights On
+    entities:
+      group.back_porch_lights: on
+      group.family_room_lights: on
+      group.master_bedroom_lights: on
+      group.upstairs_hall_lights: on
+      group.front_porch_lights: on

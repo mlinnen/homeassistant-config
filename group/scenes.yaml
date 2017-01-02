@@ -1,0 +1,4 @@
+scenes: 
+  entities: 
+    - scene.good_night
+    - scene.all_lights_on

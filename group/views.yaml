@@ -1,18 +1,15 @@
-#default_view: 
-#    view: yes
-#    entities: 
-#      - scene.good_night
-#      - group.internet
-#      - sun.sun
-    
-Lights: 
-  view: yes
-  entities: 
-    - group.front_porch_lights
-    - group.upstairs_hall_lights
-    - group.master_bedroom_lights
-    - group.family_room_lights
-    - group.back_porch_lights
+default_view: 
+    view: yes
+    entities: 
+      - group.scenes
+      - group.front_porch_lights
+      - group.master_bedroom_lights
+      - group.family_room_lights
+      - group.back_porch_lights
+      - group.upstairs_hall_lights
+      - sun.sun
+      - alarm_control_panel.alarmcom
+      - sensor.yr_symbol  
 
 Upstairs:
   view: yes
