@@ -1,4 +1,4 @@
-  alias: startup_notification
+- alias: homeassistant_started_notification
   trigger:
     platform: event
     event_type: homeassistant_start
