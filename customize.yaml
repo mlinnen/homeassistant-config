@@ -16,6 +16,8 @@
         emulated_hue_name: "Back Porch Lights"
     light.downstairs_hall_level_14_0:
         friendly_name: "Downstairs Hall Lights"
+    light.family_floor_lamp:
+        friendly_name: "Floor Lamp"
     
     sensor.aeotec_zw100_multisensor_6_temperature_6_1:
         friendly_name: "Multi Sensor Temperature"
