@@ -6,6 +6,8 @@
         friendly_name: "Front Porch Lights"
     light.master_sitting_level_9_0:
         friendly_name: "Master Sitting Lights"
+        emulated_hue: true
+        emulated_hue_name: "Master Sitting Lights"
     light.upstairs_hall_level_12_0:
         friendly_name: "Upstairs Hall Lights"
         emulated_hue: true
@@ -16,6 +18,8 @@
         emulated_hue_name: "Back Porch Lights"
     light.downstairs_hall_level_14_0:
         friendly_name: "Downstairs Hall Lights"
+        emulated_hue: true
+        emulated_hue_name: "Downstairs Hall Lights"
     light.family_floor_lamp:
         friendly_name: "Floor Lamp"
     
