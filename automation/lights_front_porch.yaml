@@ -16,4 +16,4 @@
     service: homeassistant.turn_on
     entity_id: group.front_porch_lights
     data:
-      brightness: 50
+      brightness: 60
