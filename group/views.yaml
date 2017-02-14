@@ -10,7 +10,6 @@ default_view:
       - sun.sun
       - alarm_control_panel.alarmcom
       - sensor.yr_symbol
-      - group.doors  
 
 Upstairs:
   view: yes
@@ -36,4 +35,6 @@ ha_status:
   entities:
     - group.home_assistant_status
     - group.internet
+    - group.doors
+    - group.back_porch_sensors  
 

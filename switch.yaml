@@ -1,0 +1,15 @@
+- platform: mqtt
+  name: Single Garage Door
+  payload_on: open
+  payload_off: closed
+  state_topic: "ha/garage/single/door/state"
+  command_topic: "ha/garage/single/door/set"
+  retain: true
+
+- platform: mqtt
+  name: Double Garage Door
+  payload_on: open
+  payload_off: closed
+  state_topic: "ha/garage/double/door/state"
+  command_topic: "ha/garage/double/door/set"
+  retain: true

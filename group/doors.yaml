@@ -1,4 +1,7 @@
 doors: 
   entities: 
+    - switch.single_garage_door
     - sensor.single_garage_door
+    - switch.double_garage_door
     - sensor.double_garage_door
+
