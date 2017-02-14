@@ -9,7 +9,8 @@ default_view:
       - group.upstairs_hall_lights
       - sun.sun
       - alarm_control_panel.alarmcom
-      - sensor.yr_symbol  
+      - sensor.yr_symbol
+      - group.doors  
 
 Upstairs:
   view: yes
