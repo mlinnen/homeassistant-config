@@ -1,5 +1,22 @@
 # Weather Prediction
-- platform: yr
+- platform: darksky
+  api_key: !secret dark_sky_api_key
+  monitored_conditions:
+    - summary
+    - icon
+    - nearest_storm_distance
+    - precip_type
+    - precip_probability
+    - temperature
+    - apparent_temperature
+    - wind_speed
+    - wind_bearing
+    - daily_summary
+    - minutely_summary
+    - hourly_summary
+    - temperature_max
+    - temperature_min
+
 
 # Internet Speed Test
 - platform: speedtest

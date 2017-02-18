@@ -9,7 +9,7 @@ default_view:
       - group.upstairs_hall_lights
       - sun.sun
       - alarm_control_panel.alarmcom
-      - sensor.yr_symbol
+      - sensor.dark_sky_icon
 
 Upstairs:
   view: yes
@@ -38,3 +38,9 @@ ha_status:
     - group.doors
     - group.back_porch_sensors  
 
+weather:
+  name: Weather
+  view: yes
+  entities:
+    - sensor.dark_sky_summary
+    - group.back_porch_sensors  
