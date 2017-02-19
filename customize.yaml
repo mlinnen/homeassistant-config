@@ -47,6 +47,28 @@
     sensor.speedtest_upload:
        friendly_name: 'Upload'
        icon: mdi:speedometer
+    sensor.dark_sky_temperature:
+       friendly_name: 'Temperature'
+    sensor.dark_sky_daily_high_temperature:
+       friendly_name: 'High'
+    sensor.dark_sky_daily_low_temperature:
+       friendly_name: 'Low'
+    sensor.dark_sky_apparent_temperature:
+       friendly_name: 'Feels Like'
+    sensor.dark_sky_hourly_summary:
+       friendly_name: 'Today'
+    sensor.dark_sky_daily_summary:
+       friendly_name: 'Extended'
+    sensor.dark_sky_wind_bearing:
+       friendly_name: 'Wind Direction'
+    sensor.dark_sky_wind_speed:
+       friendly_name: 'Wind'
+    sensor.dark_sky_precip:
+       friendly_name: 'Percipitation'
+    sensor.dark_sky_precip_probability:
+       friendly_name: 'Percipitation %'
+    sensor.dark_sky_nearest_storm_distance:
+       friendly_name: 'Storm Distance'
 #    sensor.speedtest_ping:
 #       friendly_name: 'Ping'
 #       icon: mdi:speedometer

@@ -9,7 +9,7 @@ default_view:
       - group.upstairs_hall_lights
       - sun.sun
       - alarm_control_panel.alarmcom
-      - sensor.dark_sky_icon
+      - group.weather
 
 Upstairs:
   view: yes
