@@ -61,3 +61,11 @@
   state_topic: "ha/garage/double/door/state"
   command_topic: "ha/garage/double/door/set"
   retain: true
+
+- platform: mqtt
+  name: Single Garage Temperature
+  state_topic: "/home/garage/1/temp/state"
+
+- platform: mqtt
+  name: Single Garage Humidity
+  state_topic: "/home/garage/1/humidity/state"
