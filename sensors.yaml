@@ -46,26 +46,20 @@
 
 - platform: mqtt
   name: Single Garage Door
-  sensor_class: opening
-  payload_on: open
-  payload_off: closed
-  state_topic: "ha/garage/single/door/state"
-  command_topic: "ha/garage/single/door/set"
-  retain: true
-
-- platform: mqtt
-  name: Double Garage Door
-  sensor_class: opening
-  payload_on: open
-  payload_off: closed
-  state_topic: "ha/garage/double/door/state"
-  command_topic: "ha/garage/double/door/set"
+  payload_open: open
+  payload_close: close
+  state_open: open
+  state_closed: closed
+  state_topic: "/home/garage/1/cover/state"
+  command_topic: "/home/garage/1/cover/cmd"
   retain: true
 
 - platform: mqtt
   name: Single Garage Temperature
+  unit_of_measurement: "°F"
   state_topic: "/home/garage/1/temp/state"
 
 - platform: mqtt
   name: Single Garage Humidity
+  unit_of_measurement: "%"
   state_topic: "/home/garage/1/humidity/state"

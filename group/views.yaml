@@ -10,6 +10,7 @@ default_view:
       - sun.sun
       - alarm_control_panel.alarmcom
       - group.weather
+      - group.doors
 
 Upstairs:
   view: yes
@@ -23,7 +24,7 @@ Downstairs:
     - group.front_porch_lights
     - group.master_bedroom_lights
     - group.back_porch_lights
-    - media_player.garage
+    - group.garage
     - media_player.roku_5y259x086201
     - media_player.roku_6325a8184086
     - media_player.directv_rid025227814974
@@ -38,9 +39,10 @@ ha_status:
     - group.doors
     - group.back_porch_sensors  
 
-weather:
-  name: Weather
+Environment:
+  name: Environment
   view: yes
   entities:
-    - sensor.dark_sky_summary
-    - group.back_porch_sensors  
+    - group.weather
+    - group.temperature_sensors  
+    - group.humidity_sensors  

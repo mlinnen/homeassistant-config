@@ -10,3 +10,14 @@ Back Porch Sensors:
     - sensor.aeotec_zw100_multisensor_6_ultraviolet_6_27
     - binary_sensor.aeotec_zw100_multisensor_6_sensor_6_0
 
+Temperature Sensors:
+  entities:
+    - sensor.dark_sky_temperature
+    - sensor.single_garage_temperature
+    - sensor.aeotec_zw100_multisensor_6_temperature_6_1
+
+Humidity Sensors:
+  entities:
+    - sensor.dark_sky_humidity
+    - sensor.single_garage_humidity
+    - sensor.aeotec_zw100_multisensor_6_relative_humidity_6_5

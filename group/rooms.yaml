@@ -12,6 +12,9 @@ Back Porch:
 Garage: 
   entities: 
     - media_player.garage
+    - sensor.single_garage_door
+    - sensor.single_garage_temperature
+    - sensor.single_garage_humidity
 
 Family Room:
   entities: 
