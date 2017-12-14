@@ -22,6 +22,10 @@
         emulated_hue_name: "Downstairs Hall Lights"
     light.family_floor_lamp:
         friendly_name: "Floor Lamp"
+    switch.ge_unknown_type5052_id3031_switch_2_0:
+        friendly_name: "Xmas Tree"
+    switch.switch_1_switch_5_0:
+        friendly_name: "Xmas Lights 1"
     
     sensor.aeotec_zw100_multisensor_6_temperature_6_1:
         friendly_name: "Back Porch Temperature"

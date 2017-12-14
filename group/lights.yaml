@@ -26,3 +26,7 @@ Upstairs Hall Lights:
   entities: 
     - light.upstairs_hall_level_12_0
 
+Xmas Lights: 
+  entities: 
+    - switch.ge_unknown_type5052_id3031_switch_2_0
+    - switch.switch_1_switch_5_0
