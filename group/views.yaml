@@ -11,6 +11,7 @@ default_view:
       - alarm_control_panel.alarmcom
       - group.weather
       - group.doors
+      - group.downstairs_lights
 
 Upstairs:
   view: yes

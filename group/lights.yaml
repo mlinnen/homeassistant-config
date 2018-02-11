@@ -10,6 +10,14 @@ Fireplace Lights:
     - light.fireplace_left
     - light.fireplace_right
 
+Downstairs Lights: 
+  entities: 
+    - group.family_room_lights
+    - group.master_bedroom_lights
+    - group.back_porch_lights
+    - group.front_porch_lights
+    - group.xmas_lights
+
 Master Bedroom Lights: 
   entities: 
     - light.master_sitting_level_9_0
