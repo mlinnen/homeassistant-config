@@ -1,6 +1,6 @@
 Family Room Lights: 
   entities: 
-    - light.couch_lamp_level_3_0
+    - light.couch_lamp
     - light.family_floor_lamp
     - light.downstairs_hall_level_14_0
     - group.fireplace_lights
