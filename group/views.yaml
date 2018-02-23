@@ -23,6 +23,7 @@ Downstairs:
   entities: 
     - group.family_room_lights
     - group.xmas_lights
+    - group.landscape_lights
     - group.front_porch_lights
     - group.master_bedroom_lights
     - group.back_porch_lights

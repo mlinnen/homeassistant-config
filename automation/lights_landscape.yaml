@@ -1,0 +1,17 @@
+- alias: xmas_off_before_sunrise
+  trigger:
+    platform: sun
+    event: sunrise
+    offset: "-00:15:00"
+  action:
+    service: homeassistant.turn_off
+    entity_id: switch.switch_1_switch_5_0
+
+- alias: xmas_on_after_sunset
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "00:15:00"
+  action:
+    service: homeassistant.turn_on
+    entity_id: switch.switch_1_switch_5_0

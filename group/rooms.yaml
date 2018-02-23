@@ -8,6 +8,7 @@ Back Porch:
     - media_player.patio
     - group.back_porch_sensors
     - group.back_porch_lights
+    - group.landscape_lights
 
 Garage: 
   entities: 

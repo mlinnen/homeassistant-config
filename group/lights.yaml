@@ -16,7 +16,7 @@ Downstairs Lights:
     - group.master_bedroom_lights
     - group.back_porch_lights
     - group.front_porch_lights
-    - group.xmas_lights
+    - group.landscape_lights
 
 Master Bedroom Lights: 
   entities: 
@@ -34,7 +34,10 @@ Upstairs Hall Lights:
   entities: 
     - light.upstairs_hall_level_12_0
 
+Landscape Lights: 
+  entities: 
+    - switch.switch_1_switch_5_0
+
 Xmas Lights: 
   entities: 
     - switch.ge_unknown_type5052_id3031_switch_2_0
-    - switch.switch_1_switch_5_0
