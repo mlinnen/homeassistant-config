@@ -26,6 +26,8 @@
         friendly_name: "Fireplace Right"
     switch.ge_unknown_type5052_id3031_switch_2_0:
         friendly_name: "Xmas Tree"
+    switch.ge_unknown_type4f50_id3032_switch_21_0:
+        friendly_name: "Back Landscape"
     switch.switch_1_switch_5_0:
         friendly_name: "Front Landscape"
     

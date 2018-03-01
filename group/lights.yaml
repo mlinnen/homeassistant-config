@@ -37,6 +37,7 @@ Upstairs Hall Lights:
 Landscape Lights: 
   entities: 
     - switch.switch_1_switch_5_0
+    - switch.ge_unknown_type4f50_id3032_switch_21_0
 
 Xmas Lights: 
   entities: 

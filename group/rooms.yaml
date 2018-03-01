@@ -9,6 +9,7 @@ Back Porch:
     - group.back_porch_sensors
     - group.back_porch_lights
     - group.landscape_lights
+    - switch.ge_unknown_type4f50_id3032_switch_21_0
 
 Garage: 
   entities: 
