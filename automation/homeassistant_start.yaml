@@ -1,8 +1,0 @@
-- alias: homeassistant_started_notification
-  trigger:
-    platform: event
-    event_type: homeassistant_start
-  action:
-    service: notify.notify
-    data:
-      message: Home Assistant is now up and running.

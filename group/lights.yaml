@@ -2,7 +2,7 @@ Family Room Lights:
   entities: 
     - light.couch_lamp
     - light.family_floor_lamp
-    - light.downstairs_hall_level_14_0
+    - light.level_6
     - group.fireplace_lights
 
 Fireplace Lights: 
@@ -17,27 +17,42 @@ Downstairs Lights:
     - group.back_porch_lights
     - group.front_porch_lights
     - group.landscape_lights
+    - light.level_6
+    - light.driveway
+
+Upstairs Lights: 
+  entities: 
+    - light.level_4
 
 Master Bedroom Lights: 
   entities: 
-    - light.master_sitting_level_9_0
+    - light.level_3
+    - light.master_bath_closet
+
+Outside Lights:
+  entities: 
+    - switch.switch_3
+    - switch.switch_4
+    - group.driveway_lights
+    - light.level_2
 
 Back Porch Lights:
   entities: 
-    - light.back_porch_level_13_0
+    - light.level_5
+
+Driveway Lights:
+  entities: 
+    - light.hue_white_lamp_1
+    - light.hue_white_lamp_2
 
 Front Porch Lights: 
   entities: 
-    - light.front_porch_level_4_0
-
-Upstairs Hall Lights: 
-  entities: 
-    - light.upstairs_hall_level_12_0
+    - light.level_2
 
 Landscape Lights: 
   entities: 
-    - switch.switch_1_switch_5_0
-    - switch.ge_unknown_type4f50_id3032_switch_21_0
+    - switch.switch_3
+    - switch.switch_4
 
 Xmas Lights: 
   entities: 

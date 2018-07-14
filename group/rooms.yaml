@@ -1,26 +1,42 @@
-Master Bedroom:
-  entities: 
-    - group.master_bedroom_lights
-    - media_player.roku_5y259x086201
-
 Back Porch: 
   entities: 
+    - binary_sensor.sensor_3
+    - sensor.aeotec_zw100_multisensor_6_relative_humidity_2
+    - sensor.aeotec_zw100_multisensor_6_temperature_2
+    - sensor.aeotec_zw100_multisensor_6_ultraviolet_2
+    - light.level_5
     - media_player.patio
-    - group.back_porch_sensors
-    - group.back_porch_lights
-    - group.landscape_lights
-    - switch.ge_unknown_type4f50_id3032_switch_21_0
 
-Garage: 
+Single Garage: 
   entities: 
-    - media_player.garage
-    - sensor.single_garage_door
+    - sensor.single_garage
     - sensor.single_garage_temperature
     - sensor.single_garage_humidity
+    - media_player.garage
 
-Family Room:
+Outside: 
   entities: 
-    - group.family_room_lights
-    - media_player.roku_6325a8184086
-    - media_player.directv_rid025227814974
+    - switch.switch_3
+    - switch.switch_4
+    - group.driveway_lights
+    - light.level_2
+    - sensor.dark_sky_temperature
+    - sensor.dark_sky_daily_summary
 
+Master Bedroom: 
+  entities: 
+    - light.level_3
+    - light.master_bath_closet
+    - media_player.mb
+
+Family Room: 
+  entities: 
+    - light.couch_lamp
+    - light.family_floor_lamp
+    - light.level_6
+    - group.fireplace_lights
+    - media_player.family_room
+
+Bonus Room:
+  entities:
+    - media_player.fr

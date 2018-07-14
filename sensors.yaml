@@ -29,23 +29,8 @@
     - visibility
     - ozone
 
-
-# Internet Speed Test
-- platform: speedtest
-  monitored_conditions:
-    - download
-    - upload
-
-- platform: systemmonitor
-  resources:
-    - type: disk_free
-      arg: /home
-    - type: memory_free
-    - type: processor_use
-    - type: last_boot
-
 - platform: mqtt
-  name: Single Garage Door
+  name: "Single Garage"
   payload_open: open
   payload_close: close
   state_open: open
@@ -63,3 +48,18 @@
   name: Single Garage Humidity
   unit_of_measurement: "%"
   state_topic: "/home/garage/1/humidity/state"
+
+# Internet Speed Test
+- platform: speedtest
+  monitored_conditions:
+    - download
+    - upload
+
+- platform: systemmonitor
+  resources:
+    - type: disk_free
+      arg: /home
+    - type: memory_free
+    - type: processor_use
+    - type: last_boot
+

@@ -4,14 +4,26 @@ homeassistant:
   # Location required to calculate the time the sun rises and sets
   latitude: !secret latitude_loc_home
   longitude: !secret longitude_loc_home
-  # Impacts weather/sunrise data
+  # Impacts weather/sunrise data (altitude above sea level in meters)
   elevation: !secret elevation_loc_home
-  
+  # metric for Metric, imperial for Imperial
   unit_system: imperial
-  
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-  time_zone: America/Indiana/Indianapolis
+  time_zone: America/New_York
+  # Customization file
   customize: !include customize.yaml
+
+mqtt:
+  broker: core-mosquitto
+  username: !secret mqtt_user
+  password: !secret mqtt_password
+
+http:
+  # Secrets are defined in the file secrets.yaml
+  # api_password: !secret http_password
+  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+  # base_url: example.duckdns.org:8123
+  api_password: !secret api_password
 
 zone:
   name: Home
@@ -20,98 +32,138 @@ zone:
   radius: 60
   icon: mdi:account-multiple
 
-http:
-  api_password: !secret api_password
-  cors_allowed_origins:
-    - 192.168.0.44
-    - http://localhost
-    - http://localhost:4201
-    - http://localhost:3000
-    - home-assistant.io
-
-mqtt:
-  broker: 127.0.0.1
-  port: 1883
-  client_id: home-assistant-1
-  username: !secret mqtt_user
-  password: !secret mqtt_password
-  
-zwave:
-  usb_path: /dev/ttyUSB0
-  config_path: /srv/homeassistant/homeassistant_venv/lib/python3.4/site-packages/libopenzwave-0.3.1-py3.4-linux-armv7l.egg/config
-  polling_interval: 60000
-  customize:
-    light.front_porch_level_4_0:
-      polling_intensity : 1
-    light.master_sitting_level_9_0:
-      polling_intensity : 1
-    light.upstairs_hall_level_12_0:
-      polling_intensity : 1
-    light.back_porch_level_13_0:
-      polling_intensity : 1
-    light.downstairs_hall_level_14_0:
-      polling_intensity : 1
-
 alarm_control_panel:
   platform: alarmdotcom
   username: !secret alarmcom_username
   password: !secret alarmcom_password
 
-##############
-#  Includes  #
-##############
+zwave:
+  usb_path: /dev/ttyUSB0
+  network_key: !secret zwave_network_key
 
 # Devices #
-#alexa: !include alexa.yaml
-group: !include_dir_merge_named group
-device_tracker: !include device_trackers.yaml
-media_player: !include media_players.yaml
 sensor: !include sensors.yaml
-#switch: !include switch.yaml
-light: !include lights.yaml
-scene: !include scenes.yaml
-automation: !include_dir_merge_list automation
-notify: !include notify.yaml
-script: !include_dir_merge_named scripts
-shell_command: !include shell_commands.yaml
 
-##############
-#  Enables   #
-##############
-logger: !include loggers.yaml
-history:
-# Discover some devices automatically
-discovery:
-sun:
-# Allows you to issue voice commands from the frontend
-conversation:
-# View all events in a logbook
-logbook:
+# Show links to resources in log and frontend
+#introduction:
+
 # Enables the frontend
 frontend:
-# Checks for available updates
-updater:
-# Record
-recorder:
-  purge_days: 30
 
+# Enables configuration UI
+config:
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+map:
+
+# Track the sun
+sun:
+
+- platform: squeezebox
+  host: 192.168.0.15
+  port: 9002
+     
 emulated_hue:
-#  host_ip: 192.168.0.25
-#  listen_port: 8300
-#  off_maps_to_on_domains:
-#    - script
-#    - scene
-#  type: alexa
   expose_by_default: false
-#  exposed_domains:
-#    - light
-#    - switch
+  exposed_domains:
+    - light
+    - switch
+    - group
+  entities:
+    group.all_lights:
+      name: "All Lights"
+      hidden: false
+    group.downstairs_lights:
+      name: "Downstairs"
+      hidden: false
+    group.upstairs_lights:
+      name: "Upstairs"
+      hidden: false
+    group.xmas_lights:
+      name: "Xmas"
+      hidden: false
+    group.landscape_lights:
+      name: "Landscape"
+      hidden: false
+    group.fireplace_lights:
+      name: "Fireplace"
+      hidden: false
+    group.outside_lights:
+      name: "Outside Lights"
+      hidden: false
+    group.back_porch_sensors:
+      hidden: true
+    group.family_room_lights:
+      name: "Family Room Lights"
+      hidden: false
+    light.level_2:
+      name: "Front Porch"
+      hidden: false
+    light.level_3:
+      name: "Master Sitting"
+      hidden: false
+    light.level_4:
+      name: "Upstairs Hall"
+      hidden: false
+    light.level_6:
+      name: "Downstairs Hall"
+      hidden: false
+    light.level_5:
+      name: "Backporch"
+      hidden: false
+    switch.switch_3:
+      name: "Landscape Back"
+      hidden: false
+    switch.switch_4:
+      name: "Landscape Front"
+      hidden: false
+    light.couch_lamp:
+      hidden: true
+    light.family_floor_lamp:
+      hidden: true
+    light.family_floor_lamp:
+      hidden: true
+    light.family_room:
+      hidden: true
+    light.fireplace_left:
+      hidden: true
+    light.fireplace_right:
+      hidden: true
+    light.family_room:
+      hidden: true
+    group.family_room:
+      hidden: true
+    group.driveway_lights:
+      hidden: true
 
 # Text to speech
 tts:
-  platform: google
+  - platform: google
 
+# Cloud
+cloud:
 
-
-
-
+group: !include_dir_merge_named group
+automation: !include automations.yaml
+script: !include scripts.yaml
