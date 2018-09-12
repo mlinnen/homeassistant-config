@@ -1,2 +1,2 @@
 # home-assistant-config
-Configuration for my Home Assistant configuration
+Configuration for my Home Assistant setup
