@@ -142,10 +142,6 @@ emulated_hue:
       hidden: true
     light.family_floor_lamp:
       hidden: true
-    light.family_floor_lamp:
-      hidden: true
-    light.family_room:
-      hidden: true
     light.fireplace_left:
       hidden: true
     light.fireplace_right:
