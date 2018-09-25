@@ -77,6 +77,11 @@ logbook:
 # Enables a map showing the location of tracked devices
 map:
 
+device_tracker:
+  - platform: nmap_tracker
+    hosts: 192.168.0.0/24
+    consider_home: 0:03:00
+
 # Track the sun
 sun:
 

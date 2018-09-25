@@ -32,6 +32,7 @@ default_view:
     - sensor.aeotec_zw100_multisensor_6_relative_humidity_2
     - sun.sun
     - sensor.single_garage
+    - group.family
 
 Rooms:
   name: Rooms

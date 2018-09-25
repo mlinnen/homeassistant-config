@@ -1,0 +1,7 @@
+family:
+  name: Family
+  control: hidden
+  entities:
+    - device_tracker.Mikes_phone
+    - device_tracker.Denises_phone
+    - device_tracker.Ashleys_phone
