@@ -12,7 +12,7 @@ Single Garage:
     - sensor.single_garage
     - sensor.single_garage_temperature
     - sensor.single_garage_humidity
-    - media_player.garage
+    - media_player.garage_2
 
 Outside: 
   entities: 
