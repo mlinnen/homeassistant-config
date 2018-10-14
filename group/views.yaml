@@ -86,3 +86,4 @@ Settings:
     - persistent_notification.config_entry_discovery
     - persistent_notification.invalid_config  
     - persistent_notification.notification  
+    - input_boolean.disable_outdoor_lights_automation
