@@ -68,6 +68,16 @@ weather:
     - sensor.dark_sky_precip
     - sensor.dark_sky_nearest_storm_distance
 
+Halloween:
+  name: Halloween
+  view: yes
+  entities:
+    - input_boolean.laugh_1_left
+    - input_boolean.laugh_1_right
+    - input_boolean.laugh_2_left
+    - input_boolean.laugh_2_right
+    - input_boolean.zombie_thriller
+
 Sensors:
   name: Sensors
   view: yes
@@ -87,3 +97,5 @@ Settings:
     - persistent_notification.invalid_config  
     - persistent_notification.notification  
     - input_boolean.disable_outdoor_lights_automation
+    - input_boolean.loop_halloween_video
+    - input_boolean.disable_halloween_motion_sensor

@@ -89,11 +89,42 @@ sun:
   host: 192.168.0.15
   port: 9002
 
+light:
+  - platform: lifx
+  
 input_boolean:
   disable_outdoor_lights_automation:
     name: Disable the outdoor lights automation
     initial: off
     icon: mdi:track-light
+  loop_halloween_video:
+    name: Loop the Halloween Video
+    initial: off
+    icon: mdi:toggle-switch
+  disable_halloween_motion_sensor:
+    name: Disable Halloween Sensors
+    initial: off
+    icon: mdi:toggle-switch
+  laugh_1_left:
+    name: Laugh 1 Left
+    initial: off
+    icon: mdi:toggle-switch
+  laugh_2_left:
+    name: Laugh 2 Left
+    initial: off
+    icon: mdi:toggle-switch
+  laugh_1_right:
+    name: Laugh 1 Right
+    initial: off
+    icon: mdi:toggle-switch
+  laugh_2_right:
+    name: Laugh 2 Right
+    initial: off
+    icon: mdi:toggle-switch
+  zombie_thriller:
+    name: Zombie Thriller
+    initial: off
+    icon: mdi:toggle-switch
 
 panel_iframe:
   nodered_flows:
