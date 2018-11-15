@@ -4,7 +4,7 @@ Back Porch:
     - sensor.aeotec_zw100_multisensor_6_relative_humidity_2
     - sensor.aeotec_zw100_multisensor_6_temperature_2
     - sensor.aeotec_zw100_multisensor_6_ultraviolet_2
-    - light.level_5
+    - light.back_porch_level
     - media_player.patio
 
 Single Garage: 
@@ -12,20 +12,20 @@ Single Garage:
     - sensor.single_garage
     - sensor.single_garage_temperature
     - sensor.single_garage_humidity
-    - media_player.garage_2
+    - media_player.garage
 
 Outside: 
   entities: 
-    - switch.switch_3
-    - switch.switch_4
+    - switch.landscape_front
+    - switch.landscape_back
     - group.driveway_lights
-    - light.level_2
+    - light.front_porch_level
     - sensor.dark_sky_temperature
     - sensor.dark_sky_daily_summary
 
 Master Bedroom: 
   entities: 
-    - light.level_3
+    - light.master_sitting_level
     - light.master_bath_closet
     - media_player.mb
 

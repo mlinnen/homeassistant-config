@@ -37,9 +37,9 @@ alarm_control_panel:
   username: !secret alarmcom_username
   password: !secret alarmcom_password
 
-zwave:
-  usb_path: /dev/ttyUSB0
-  network_key: !secret zwave_network_key
+#zwave:
+#  usb_path: /dev/ttyAMA0
+#  network_key: !secret zwave_network_key
 
 # Devices #
 sensor: !include sensors.yaml
@@ -77,10 +77,10 @@ logbook:
 # Enables a map showing the location of tracked devices
 map:
 
-device_tracker:
-  - platform: nmap_tracker
-    hosts: 192.168.0.0/24
-    consider_home: 0:03:00
+#device_tracker:
+#  - platform: nmap_tracker
+#    hosts: 192.168.0.0/24
+#    consider_home: 0:03:00
 
 # Track the sun
 sun:
@@ -89,9 +89,6 @@ sun:
   host: 192.168.0.15
   port: 9002
 
-light:
-  - platform: lifx
-  
 input_boolean:
   disable_outdoor_lights_automation:
     name: Disable the outdoor lights automation
@@ -165,25 +162,25 @@ emulated_hue:
     group.family_room_lights:
       name: "Family Room Lights"
       hidden: false
-    light.level_2:
+    light.front_porch_level:
       name: "Front Porch"
       hidden: false
-    light.level_3:
+    light.master_sitting_level:
       name: "Master Sitting"
       hidden: false
-    light.level_4:
+    light.upstairs_hall_level:
       name: "Upstairs Hall"
       hidden: false
-    light.level_6:
+    light.downstairs_hall_level:
       name: "Downstairs Hall"
       hidden: false
-    light.level_5:
+    light.back_porch_level:
       name: "Backporch"
       hidden: false
-    switch.switch_3:
+    switch.landscape_back:
       name: "Landscape Back"
       hidden: false
-    switch.switch_4:
+    switch.landscape_front:
       name: "Landscape Front"
       hidden: false
     light.couch_lamp:
