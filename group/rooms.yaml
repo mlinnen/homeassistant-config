@@ -28,6 +28,7 @@ Master Bedroom:
     - light.master_sitting_level
     - light.master_bath_closet
     - media_player.mb
+    - media_player.master_bath
 
 Family Room: 
   entities: 
@@ -36,6 +37,12 @@ Family Room:
     - light.level_6
     - group.fireplace_lights
     - media_player.family_room
+    - media_player.kitchen_echo
+    - switch.smart_switch_1
+
+Kitchen: 
+  entities: 
+    - sensor.home_to_work
 
 Bonus Room:
   entities:

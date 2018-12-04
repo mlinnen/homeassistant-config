@@ -5,6 +5,7 @@ views:
   - id: 07B07FF1-245F-4947-A06D-F9FB1D2F94BB
     name: Home
     icon: mdi:home
+    theme: PmxMononight
     cards:
       - title: Mint Hill Forecast
         type: custom:dark-sky-weather-card
@@ -103,6 +104,13 @@ views:
         type: alarm-panel
         title: House Alarm
         entity: alarm_control_panel.alarmcom
+      - id: 610DF73A-1E0D-4FAB-9F12-1AB8CD6C8429
+        type: entities
+        title: Drive Time
+        show_header_toggle: true
+        entities:
+          - entity: sensor.home_to_work
+            secondary_info: duration
   - id: B303B844-4546-4250-9254-18B7CCE333CD
     title: Lights
     icon: mdi:lightbulb
@@ -162,4 +170,4 @@ views:
         line_color: "#3498db"
       - type: sensor
         entity: sensor.dark_sky_apparent_temperature
-        name: Mint Hill
+        name: !secret city_loc_home

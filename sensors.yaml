@@ -18,6 +18,30 @@
   unit_of_measurement: "%"
   state_topic: "/home/garage/1/humidity/state"
 
+- platform: google_travel_time
+  name: Home to Work
+  api_key: !secret google_api_key
+  origin: zone.home
+  destination: zone.work
+
+- platform: template
+  sensors:
+    master_bath_temperature:
+      friendly_name: 'Master Bath Temperature'
+      value_template: '{{states.sensor.master_bath_motion_sensor.attributes.temperature}}'
+      unit_of_measurement: °C
+    master_bath_lux:
+      friendly_name: 'Master Bath Lux'
+      value_template: '{{states.sensor.master_bath_motion_sensor.attributes.lx}}'
+      unit_of_measurement: lux
+    master_bath_dark:
+      friendly_name: 'Master Bath Dark'
+      value_template: '{{states.sensor.master_bath_motion_sensor.attributes.dark}}'
+
+- platform: hue
+  ip_address: 192.168.0.24
+  token: !secret hue_hub_password
+
 # Internet Speed Test
 - platform: speedtest
   monitored_conditions:

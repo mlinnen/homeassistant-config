@@ -33,6 +33,7 @@ default_view:
     - sun.sun
     - sensor.single_garage
     - group.family
+    - sensor.home_to_work
 
 Rooms:
   name: Rooms
@@ -45,6 +46,7 @@ Rooms:
     - group.family_room
     - group.bonus_room
     - group.upstairs_lights
+    - group.kitchen
 
 Environment:
   name: Weather
@@ -88,6 +90,10 @@ Sensors:
     - group.back_porch_sensors  
     - group.temperature_sensors  
     - group.humidity_sensors  
+    - sensor.master_bath_motion_sensor
+    - group.light_sensors
+    - group.motion_sensors
+    - group.binary_sensors
 
 Settings:
   name: Settings

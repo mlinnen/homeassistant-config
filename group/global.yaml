@@ -14,7 +14,19 @@ Temperature Sensors:
   entities:
     - sensor.dark_sky_temperature
     - sensor.single_garage_temperature
-    - sensor.aeotec_zw100_multisensor_6_temperature_2
+    - sensor.master_bath_temperature
+
+Light Sensors:
+  entities:
+    - sensor.master_bath_lux
+
+Binary Sensors:
+  entities:
+    - sensor.master_bath_dark
+
+Motion Sensors:
+  entities:
+    - sensor.master_bath_motion_sensor
 
 Humidity Sensors:
   entities:

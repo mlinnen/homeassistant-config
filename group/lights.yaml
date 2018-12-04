@@ -56,4 +56,4 @@ Landscape Lights:
 
 Xmas Lights: 
   entities: 
-    - switch.ge_unknown_type5052_id3031_switch_2_0
+    - switch.smart_switch_1
