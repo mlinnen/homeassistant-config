@@ -1,0 +1,9 @@
+keezer: 
+  entities: 
+    - binary_sensor.keezer_compressor
+    - light.keezer_light
+    - sensor.keezer_average_temperature
+    - sensor.keezer_top_temperature
+    - sensor.keezer_bottom_temperature
+    - sensor.keezer_exterior_temperature
+    - binary_sensor.keezer_fan
