@@ -1,40 +1,36 @@
 Back Porch: 
   entities: 
-    - binary_sensor.sensor_3
-    - sensor.aeotec_zw100_multisensor_6_relative_humidity_2
-    - sensor.aeotec_zw100_multisensor_6_temperature_2
-    - sensor.aeotec_zw100_multisensor_6_ultraviolet_2
-    - light.back_porch_level
+    - light.back_porch_ceiling
     - media_player.patio
 
 Single Garage: 
   entities: 
-    - sensor.single_garage
     - sensor.single_garage_temperature
     - sensor.single_garage_humidity
     - media_player.garage
+  control: hidden
 
 Outside: 
   entities: 
-    - switch.landscape_front
-    - switch.landscape_back
+    - switch.landscape_front_light
+    - switch.landscape_back_light
     - group.driveway_lights
-    - light.front_porch_level
+    - light.front_porch_ceiling
     - sensor.dark_sky_temperature
     - sensor.dark_sky_daily_summary
 
 Master Bedroom: 
   entities: 
-    - light.master_sitting_level
+    - light.master_sitting_ceiling
     - light.master_bath_closet
-    - media_player.mb
+    - media_player.master_roku
     - media_player.master_bath
 
 Family Room: 
   entities: 
     - light.couch_lamp
     - light.family_floor_lamp
-    - light.level_6
+    - light.downstairs_hall_ceiling
     - group.fireplace_lights
     - media_player.family_room
     - media_player.kitchen_echo
@@ -43,7 +39,8 @@ Family Room:
 Kitchen: 
   entities: 
     - sensor.home_to_work
+  control: hidden
 
-Bonus Room:
-  entities:
-    - media_player.fr
+Office: 
+  entities: 
+    - media_player.office_echo

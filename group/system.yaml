@@ -1,13 +1,6 @@
 Internet: 
+  control: hidden
   entities: 
     - sensor.speedtest_ping
     - sensor.speedtest_download
     - sensor.speedtest_upload
-
-Home Assistant Status:
-  entities: 
-    - script.restart_ha
-    - sensor.cpu_use
-    - sensor.ram_free
-    - sensor.disk_free_home
-    - sensor.last_boot

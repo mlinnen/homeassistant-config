@@ -34,6 +34,7 @@ default_view:
     - sensor.single_garage
     - group.family
     - sensor.home_to_work
+    - media_player.office_echo
 
 Rooms:
   name: Rooms
@@ -84,10 +85,8 @@ Sensors:
   name: Sensors
   view: yes
   entities:
-    - group.home_assistant_status
-    - group.speed_test
+    - group.internet
     - group.doors
-    - group.back_porch_sensors  
     - group.temperature_sensors  
     - group.humidity_sensors  
     - sensor.master_bath_motion_sensor

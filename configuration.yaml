@@ -11,19 +11,58 @@ homeassistant:
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: America/New_York
   # Customization file
-  customize: !include customize.yaml
+  #customize: !include customize.yaml
 
 mqtt:
-  broker: core-mosquitto
+  broker: 192.168.0.25
   username: !secret mqtt_user
   password: !secret mqtt_password
 
-http:
-  # Secrets are defined in the file secrets.yaml
-  # api_password: !secret http_password
-  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-  # base_url: example.duckdns.org:8123
-  api_password: !secret api_password
+# Configure a default setup of Home Assistant (frontend, api, etc)
+#default_config:
+
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+# http:
+#   base_url: example.duckdns.org:8123
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+map:
+
+mobile_app:
+
+config:
+
+cloud:
+
+# Track the sun
+sun:
+
+system_health:
+
+recorder:
+  purge_keep_days: 90
+
+zwave:
+  usb_path: /dev/ttyUSB0
+  network_key: !secret zwave_network_key
+
+#person:
+#  - name: Mike
+#    id: c6b7a1d776fd47548e6995dff4147a00
+#    device_trackers:
+#      - device_tracker.mikes_phone
 
 zone:
   - name: Home
@@ -42,122 +81,43 @@ alarm_control_panel:
   username: !secret alarmcom_username
   password: !secret alarmcom_password
 
-#zwave:
-#  usb_path: /dev/ttyAMA0
-#  network_key: !secret zwave_network_key
+weather:
+  - platform: darksky
+    api_key: !secret dark_sky_api_key
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+http:
+  base_url: http://192.168.0.56:8123
 
 # Devices #
 sensor: !include sensors.yaml
 
-# Show links to resources in log and frontend
-#introduction:
+# Internet Speed Test
+speedtestdotnet:
+  scan_interval:
+    minutes: 30
+  monitored_conditions:
+    - ping
+    - download
+    - upload
 
-# Enables the frontend
-frontend:
-  themes:
-    PmxMononight:
-      # MyVariables
-      base-hue: '220' #Controls the base (and accent) color hue (0-360) | 0=Red 60=Yellow 120=Green 180=Cyan 240=Blue 300=Magenta 360=Red
-      base-sat: '16%' #Controls the saturation of the theme (0%-100%) | 0%=Grey 100%=Full Saturation
-      # MyVar
-      huesat: 'var(--base-hue), var(--base-sat),'
-      # Primary Color
-      primary-color: 'hsl(var(--huesat) 20%)'
-      # Backgrounds
-      primary-background-color: 'var(--primary-color)'
-      secondary-background-color: 'hsl(var(--huesat) 16%)'
-      paper-listbox-background-color: 'var(--primary-color)'
-      paper-card-background-color: 'hsl(var(--huesat) 12%)'
-      paper-dialog-background-color: 'var(--paper-card-background-color)'
-      table-row-background-color: 'hsl(var(--huesat) 12%)'
-      table-row-alternative-background-color: 'hsl(var(--huesat) 10%)'
-      # Devider
-      divider-color: 'hsla(0, 0%, 0%, 0)'
-      dark-divider-opacity: '0'
-      light-divider-opacity: '0'
-      # Text colors
-      primary-text-color: 'hsl(var(--huesat) 60%)'
-      text-primary-color: 'hsl(var(--huesat) 60%)'
-      secondary-text-color: 'hsl(var(--huesat) 60%)'
-      disabled-text-color: 'hsl(var(--huesat) 70%)'
-      sidebar-text_-_color: 'hsl(var(--huesat) 90%)'
-      sidebar-text-color: 'hsl(var(--huesat) 90%)'
-      paper-card-header-color: 'hsl(var(--base-hue), 90%, 50%)'
-      # Text Adjustments
-      paper-font-headline_-_letter-spacing: '-0.5px'
-      paper-font-headline_-_font-weight: '500'
-      paper-font-body1_-_font-weight: '500'
-      # Nav Menu
-      paper-listbox-color: 'hsl(var(--huesat) 50%)'
-      paper-grey-50: 'hsl(var(--huesat) 50%)'
-      paper-grey-200: 'hsla(var(--huesat) 26%)'
-      # Paper card
-      paper-item-icon-color: 'hsl(var(--huesat) 30%)'
-      paper-item-icon-active-color: 'var(--paper-item-icon-color)'
-      paper-item-icon_-_color: 'var(--paper-item-icon-color)'
-      paper-item-selected_-_background-color: 'hsla(0, 0%, 0%, 0.2)'
-      paper-tabs-selection-bar-color: 'hsla(0, 0%, 0%, 0.2)'
-      # Labels
-      label-badge-red: 'hsla(0, 0%, 0%, 0)'
-      label-badge-border-color: 'var(--label-badge-red)'
-      label-badge-background-color: 'var(--paper-card-background-color)'
-      label-badge-text-color: 'var(--primary-text-color)'
-      # Shadows
-      shadow-elevation-2dp_-_box-shadow: 'inset 0px 0px 0px 4px hsl(var(--huesat) 18%)'
-      shadow-elevation-16dp_-_box-shadow: 'inset 0px 0px 0px 4px hsl(var(--huesat) 28%)'
-      # Switches
-      paper-toggle-button-checked-button-color: 'hsl(var(--base-hue), 90%, 50%)'
-      paper-toggle-button-checked-bar-color: 'hsl(var(--huesat) 25%)'
-      paper-toggle-button-unchecked-button-color: 'hsl(var(--huesat) 25%)'
-      paper-toggle-button-unchecked-bar-color: 'hsl(var(--huesat) 5%)'
-      # Sliders
-      paper-slider-knob-color:  'hsl(var(--base-hue), 90%, 50%)'
-      paper-slider-knob-start-color: 'hsl(var(--base-hue), 80%, 25%)'
-      paper-slider-pin-color:  'hsl(var(--base-hue), 90%, 50%)'
-      paper-slider-active-color:  'hsl(var(--base-hue), 90%, 50%)'
-      paper-slider-container-color: 'hsl(var(--huesat) 28%)'
-      paper-slider-secondary-color: 'hsl(var(--huesat) 90%)'
-      paper-slider-disabled-active-color: 'hsl(var(--base-hue), 80%, 25%)'
-      paper-slider-disabled-secondary-color: 'hsl(var(--base-hue), 80%, 25%)'
-      paper-dialog-color: 'hsl(var(--base-hue), 20%, 80%)'
-# Enables configuration UI
-config:
+roku:
+  - host: 192.168.0.210
+  - host: 192.168.0.66
 
-# Checks for available updates
-# Note: This component will send some information about your system to
-# the developers to assist with development of Home Assistant.
-# For more information, please see:
-# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
-updater:
-  # Optional, allows Home Assistant developers to focus on popular components.
-  # include_used_components: true
+media_player:
+  - platform: squeezebox
+    host: 192.168.0.15
+    port: 9002
 
-# Discover some devices automatically
-discovery:
-
-# Allows you to issue voice commands from the frontend in enabled browsers
-conversation:
-
-# Enables support for tracking state changes over time
-history:
-
-# View all events in a logbook
-logbook:
-
-# Enables a map showing the location of tracked devices
-map:
-
-#device_tracker:
-#  - platform: nmap_tracker
-#    hosts: 192.168.0.0/24
-#    consider_home: 0:03:00
-
-# Track the sun
-sun:
-
-- platform: squeezebox
-  host: 192.168.0.15
-  port: 9002
+alexa_media:
+  accounts:
+    - email: !secret alexa_username
+      password: !secret alexa_password
+      url: "amazon.com"
 
 input_boolean:
   disable_outdoor_lights_automation:
@@ -193,94 +153,137 @@ input_boolean:
     initial: off
     icon: mdi:toggle-switch
 
-panel_iframe:
-  nodered_flows:
-    title: 'Node-RED Flows'
-    url: 'http://hassio.local:1880'
-    icon: mdi:nodejs
-    
-emulated_hue:
-  expose_by_default: false
-  exposed_domains:
-    - light
-    - switch
-    - group
-  entities:
-    group.all_lights:
-      name: "All Lights"
-      hidden: false
-    group.downstairs_lights:
-      name: "Downstairs"
-      hidden: false
-    group.upstairs_lights:
-      name: "Upstairs"
-      hidden: false
-    group.xmas_lights:
-      name: "Xmas"
-      hidden: false
-    group.landscape_lights:
-      name: "Landscape"
-      hidden: false
-    group.fireplace_lights:
-      name: "Fireplace"
-      hidden: false
-    group.outside_lights:
-      name: "Outside Lights"
-      hidden: false
-    group.back_porch_sensors:
-      hidden: true
-    group.family_room_lights:
-      name: "Family Room Lights"
-      hidden: false
-    light.front_porch_level:
-      name: "Front Porch"
-      hidden: false
-    light.master_sitting_level:
-      name: "Master Sitting"
-      hidden: false
-    light.upstairs_hall_level:
-      name: "Upstairs Hall"
-      hidden: false
-    light.downstairs_hall_level:
-      name: "Downstairs Hall"
-      hidden: false
-    light.back_porch_level:
-      name: "Backporch"
-      hidden: false
-    switch.landscape_back:
-      name: "Landscape Back"
-      hidden: false
-    switch.landscape_front:
-      name: "Landscape Front"
-      hidden: false
-    light.couch_lamp:
-      hidden: true
-    light.family_floor_lamp:
-      hidden: true
-    light.fireplace_left:
-      hidden: true
-    light.fireplace_right:
-      hidden: true
-    light.family_room:
-      hidden: true
-    group.family_room:
-      hidden: true
-    group.driveway_lights:
-      hidden: true
+#emulated_hue:
+#  expose_by_default: false
+#  exposed_domains:
+#    - light
+#    - switch
+#    - group
+#  entities:
+#    group.all_lights:
+#      name: "All Lights"
+#      hidden: false
+#    group.downstairs_lights:
+#      name: "Downstairs"
+#      hidden: false
+#    group.upstairs_lights:
+#      name: "Upstairs"
+#      hidden: false
+#    group.xmas_lights:
+#      name: "Xmas"
+#      hidden: false
+#    group.landscape_lights:
+#      name: "Landscape"
+#      hidden: false
+#    group.fireplace_lights:
+#      name: "Fireplace"
+#      hidden: false
+#    group.outside_lights:
+#      name: "Outside Lights"
+#      hidden: false
+#    group.back_porch_sensors:
+#      hidden: true
+#    group.family_room_lights:
+#      name: "Family Room Lights"
+#      hidden: false
+#    light.front_porch_level:
+#      name: "Front Porch"
+#      hidden: false
+#    light.master_sitting_level:
+#      name: "Master Sitting"
+#      hidden: false
+#    light.upstairs_hall_level:
+#      name: "Upstairs Hall"
+#      hidden: false
+#    light.downstairs_hall_level:
+#      name: "Downstairs Hall"
+#      hidden: false
+#    light.back_porch_level:
+#      name: "Backporch"
+#      hidden: false
+#    switch.landscape_back:
+#      name: "Landscape Back"
+#      hidden: false
+#    switch.landscape_front:
+#      name: "Landscape Front"
+#      hidden: false
+#    light.couch_lamp:
+#      hidden: true
+#    light.family_floor_lamp:
+#      hidden: true
+#    light.fireplace_left:
+#      hidden: true
+#    light.fireplace_right:
+#      hidden: true
+#    light.family_room:
+#      hidden: true
+#    group.family_room:
+#      hidden: true
+#    group.driveway_lights:
+#      hidden: true
 
-media_player:
-  - platform: alexa
-    email: !secret alexa_username
-    password: !secret alexa_password
-    url: "amazon.com"
+lovelace:
+  mode: yaml
 
-# Text to speech
-tts:
-  - platform: google
+influxdb:
+  host: 192.168.0.56
+  include:
+    entities:
+      - sensor.single_garage_humidity
+      - sensor.single_garage_temperature
+      - sensor.speedtest_download
+      - sensor.speedtest_upload
+      - sensor.processor_use
+      - sensor.memory_free
+      - sensor.master_bath_sensor_temperature
+      - sensor.master_bath_sensor_light_level
+      - binary_sensor.master_bath_sensor_motion
+      - binary_sensor.keezer_fan
+      - light.keezer_light
+      - sensor.home_to_work
+      - sensor.keezer_bottom_temperature
+      - sensor.keezer_top_temperature
+      - sensor.keezer_exterior_temperature
+      - sensor.keezer_average_temperature
+      - binary_sensor.keezer_compressor
+    domains:
+      - sensor
+  component_config_glob:
+    sensor.*humidity:
+      override_measurement: humidity
+    sensor.*temperature:
+      override_measurement: temperature
 
-# Cloud
-cloud:
+binary_sensor:
+  - platform: mqtt
+    name: "Keezer Motion"
+    state_topic: "/home/keezer/1/motion/value"
+    payload_on: "1"
+    payload_off: "0"
+  - platform: mqtt
+    name: "Keezer Fan"
+    state_topic: "/home/keezer/1/fan/value"
+    payload_on: "1"
+    payload_off: "0"
+  - platform: mqtt
+    name: "Keezer Compressor"
+    state_topic: "/home/keezer/1/compressor/value"
+    payload_on: "1"
+    payload_off: "0"
+
+light:
+  - platform: mqtt
+    name: "Keezer Light"
+    state_topic: "/home/keezer/1/light/value"
+    command_topic: "/home/keezer/1/light/set"
+    payload_on: "1"
+    payload_off: "0"
+    optimistic: false
+
+hue:
+  bridges:
+    - host: 192.168.0.24
 
 group: !include_dir_merge_named group
 automation: !include automations.yaml
-script: !include scripts.yaml
+#script: !include scripts.yaml

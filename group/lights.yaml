@@ -2,13 +2,13 @@ Family Room Lights:
   entities: 
     - light.couch_lamp
     - light.family_floor_lamp
-    - light.downstairs_hall_level
+    - light.downstairs_hall_ceiling
     - group.fireplace_lights
 
 Fireplace Lights: 
   entities: 
-    - light.hue_white_lamp_fire_left
-    - light.hue_white_lamp_fire_right
+    - light.fireplace_left
+    - light.fireplace_right
 
 Downstairs Lights: 
   entities: 
@@ -17,42 +17,42 @@ Downstairs Lights:
     - group.back_porch_lights
     - group.front_porch_lights
     - group.landscape_lights
-    - light.downstairs_hall_level
+    - light.downstairs_hall_ceiling
     - light.driveway
 
 Upstairs Lights: 
   entities: 
-    - light.upstairs_hall_level
+    - light.upstairs_hall_ceiling
 
 Master Bedroom Lights: 
   entities: 
-    - light.master_sitting_level
+    - light.master_sitting_ceiling
     - light.master_bath_closet
 
 Outside Lights:
   entities: 
-    - switch.landscape_front
-    - switch.landscape_back
+    - switch.landscape_front_light
+    - switch.landscape_back_light
     - group.driveway_lights
-    - light.front_porch_level
+    - light.front_porch_ceiling
 
 Back Porch Lights:
   entities: 
-    - light.back_porch_level
+    - light.back_porch_ceiling
 
 Driveway Lights:
   entities: 
-    - light.hue_white_lamp_1
-    - light.hue_white_lamp_2
+    - light.driveway_left
+    - light.driveway_right
 
 Front Porch Lights: 
   entities: 
-    - light.front_porch_level
+    - light.front_porch_ceiling
 
 Landscape Lights: 
   entities: 
-    - switch.landscape_front
-    - switch.landscape_back
+    - switch.landscape_front_light
+    - switch.landscape_back_light
 
 Xmas Lights: 
   entities: 

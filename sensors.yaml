@@ -1,14 +1,4 @@
 - platform: mqtt
-  name: "Single Garage"
-  payload_open: open
-  payload_close: close
-  state_open: open
-  state_closed: closed
-  state_topic: "/home/garage/1/cover/state"
-  command_topic: "/home/garage/1/cover/cmd"
-  retain: true
-
-- platform: mqtt
   name: Single Garage Temperature
   unit_of_measurement: "°F"
   state_topic: "/home/garage/1/temp/state"
@@ -18,43 +8,37 @@
   unit_of_measurement: "%"
   state_topic: "/home/garage/1/humidity/state"
 
+- platform: mqtt
+  name: Keezer Top Temperature
+  unit_of_measurement: "°F"
+  state_topic: "/home/keezer/1/temp/top"
+
+- platform: mqtt
+  name: Keezer Bottom Temperature
+  unit_of_measurement: "°F"
+  state_topic: "/home/keezer/1/temp/bottom"
+
+- platform: mqtt
+  name: Keezer Exterior Temperature
+  unit_of_measurement: "°F"
+  state_topic: "/home/keezer/1/temp/exterior"
+
+- platform: mqtt
+  name: Keezer Average Temperature
+  unit_of_measurement: "°F"
+  state_topic: "/home/keezer/1/temp/avg"
+
+- platform: google_wifi
+
 - platform: google_travel_time
   name: Home to Work
   api_key: !secret google_api_key
   origin: zone.home
   destination: zone.work
 
-- platform: template
-  sensors:
-    master_bath_temperature:
-      friendly_name: 'Master Bath Temperature'
-      value_template: '{{states.sensor.master_bath_motion_sensor.attributes.temperature}}'
-      unit_of_measurement: °C
-    master_bath_lux:
-      friendly_name: 'Master Bath Lux'
-      value_template: '{{states.sensor.master_bath_motion_sensor.attributes.lx}}'
-      unit_of_measurement: lux
-    master_bath_dark:
-      friendly_name: 'Master Bath Dark'
-      value_template: '{{states.sensor.master_bath_motion_sensor.attributes.dark}}'
-
 - platform: hue
   ip_address: 192.168.0.24
   token: !secret hue_hub_password
-
-# Internet Speed Test
-- platform: speedtest
-  monitored_conditions:
-    - download
-    - upload
-
-- platform: systemmonitor
-  resources:
-    - type: disk_free
-      arg: /home
-    - type: memory_free
-    - type: processor_use
-    - type: last_boot
 
 - platform: darksky
   api_key: !secret dark_sky_api_key

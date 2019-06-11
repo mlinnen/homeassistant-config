@@ -3,9 +3,11 @@ weather:
     - sensor.dark_sky_hourly_summary
     - sensor.dark_sky_daily_summary
     - sensor.dark_sky_temperature
-    - sensor.dark_sky_daily_high_temperature
-    - sensor.dark_sky_daily_low_temperature
+    - sensor.dark_sky_temperature_high
+    - sensor.dark_sky_temperature_low
     - sensor.dark_sky_apparent_temperature
+    - sensor.dark_sky_apparent_temperature_high
+    - sensor.dark_sky_apparent_temperature_low
     - sensor.dark_sky_wind_bearing
     - sensor.dark_sky_wind_speed
     - sensor.dark_sky_precip
