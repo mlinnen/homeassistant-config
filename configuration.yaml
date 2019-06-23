@@ -21,6 +21,9 @@ mqtt:
 # Configure a default setup of Home Assistant (frontend, api, etc)
 #default_config:
 
+frontend:
+  themes: !include themes.yaml
+
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 # http:
 #   base_url: example.duckdns.org:8123
@@ -63,6 +66,11 @@ zwave:
 #    id: c6b7a1d776fd47548e6995dff4147a00
 #    device_trackers:
 #      - device_tracker.mikes_phone
+
+#device_tracker:
+#  - platform: google_maps
+#    username: !secret google_username
+#    password: !secret google_password
 
 zone:
   - name: Home
@@ -107,6 +115,7 @@ speedtestdotnet:
 roku:
   - host: 192.168.0.210
   - host: 192.168.0.66
+  #- host: 192.168.0.96 
 
 media_player:
   - platform: squeezebox
@@ -279,6 +288,13 @@ light:
     payload_on: "1"
     payload_off: "0"
     optimistic: false
+
+light:
+  - platform: group
+    name: "Fireplace Lights"
+    entities:
+      - light.fireplace_left
+      - light.fireplace_right
 
 hue:
   bridges:
