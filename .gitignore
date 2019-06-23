@@ -9,6 +9,7 @@
 .storage
 .uuid
 .config_entries.json
+.google*
 OZW_Log.txt
 home-assistant.log
 home-assistant_v2.db
