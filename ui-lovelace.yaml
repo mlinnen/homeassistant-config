@@ -17,6 +17,8 @@ views:
             entity: light.family_floor_lamp
           - type: light
             entity: light.downstairs_hall_ceiling
+          - type: light
+            entity: light.fireplace_lights
       - type: vertical-stack
         cards:
           - type: light
@@ -58,26 +60,38 @@ views:
         entity: media_player.garage
       - type: media-control
         entity: media_player.master_roku
+      - type: media-control
+        entity: media_player.patio_roku
+      - type: media-control
+        entity: media_player.kitchen_echo
+      - type: media-control
+        entity: media_player.master_bath_echo
   - title: Sensors
     icon: mdi:chart-areaspline
     cards:
       - type: sensor
         entity: sensor.dark_sky_temperature
+        graph: line
       - type: sensor
         entity: sensor.single_garage_temperature
+        graph: line
       - type: sensor
         entity: sensor.keezer_exterior_temperature
+        graph: line
       - type: vertical-stack
         cards:
           - type: sensor
             entity: sensor.keezer_top_temperature
+            graph: line
           - type: sensor
             entity: sensor.keezer_average_temperature
+            graph: line
           - type: sensor
             entity: sensor.keezer_bottom_temperature
+            graph: line
       - type: sensor
         entity: sensor.master_bath_sensor_temperature
+        graph: line
       - type: sensor
         entity: sensor.single_garage_humidity
-      - type: sensor
-        entity: sensor.single_garage_humidity
+        graph: line
