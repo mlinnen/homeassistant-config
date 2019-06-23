@@ -5,11 +5,6 @@ Family Room Lights:
     - light.downstairs_hall_ceiling
     - group.fireplace_lights
 
-Fireplace Lights: 
-  entities: 
-    - light.fireplace_left
-    - light.fireplace_right
-
 Downstairs Lights: 
   entities: 
     - group.family_room_lights
