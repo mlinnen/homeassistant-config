@@ -1,7 +1,7 @@
 Back Porch: 
   entities: 
     - light.back_porch_ceiling
-    - media_player.patio
+    - media_player.patio_roku
 
 Single Garage: 
   entities: 
