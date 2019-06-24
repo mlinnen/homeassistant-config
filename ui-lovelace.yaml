@@ -51,6 +51,26 @@ views:
 
   - title: Lights
     icon: mdi:lightbulb
+    cards:
+      - type: entities
+        title: Master Bedroom
+        entities:
+        - entity: light.master_bath_closet
+        - entity: light.master_sitting_ceiling
+      - type: entities
+        title: Family Room
+        entities:
+        - entity: light.couch_lamp
+        - entity: light.downstairs_hall_ceiling
+        - entity: light.family_floor_lamp
+        - entity: light.fireplace_lights
+      - type: entities
+        title: Outside
+        entities:
+        - entity: light.driveway
+        - entity: light.front_porch_ceiling
+        - entity: switch.landscape_back_light
+        - entity: switch.landscape_front_light
   - title: Media
     icon: mdi:filmstrip
     cards:
