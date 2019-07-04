@@ -19,6 +19,7 @@ Light Sensors:
 Motion Sensors:
   entities:
     - binary_sensor.master_bath_sensor_motion
+    - binary_sensor.keezer_motion
 
 Humidity Sensors:
   entities:
