@@ -52,17 +52,16 @@ config:
 cloud:
   alexa:
     filter:
-      include_entities:
-        - light.couch_lamp
-        - light.family_floor_lamp
-        - light.driveway
-        - light.back_porch_ceiling
-        - light.downstairs_hall_ceiling
-        - light.fireplace_lights
-        - light.master_bath_closet
-        - light.upstairs_hall_ceiling
-        - light.family_room
-        - light.master_sitting_ceiling
+      include_domains:
+        - light
+        - group
+        - switch
+        - sensor
+      exclude_entities:
+        - light.fireplace_right
+        - light.fireplace_left
+        - light.driveway_right
+        - light.driveway_left
     entity_config:
       light.couch_lamp:
         name: Couch Lamp

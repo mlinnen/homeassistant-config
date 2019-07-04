@@ -34,10 +34,12 @@ Outside Lights:
 Back Porch Lights:
   entities: 
     - light.back_porch_ceiling
+    - switch.landscape_back_light
 
 Front Porch Lights: 
   entities: 
     - light.front_porch_ceiling
+    - switch.landscape_front_light
 
 Landscape Lights: 
   entities: 
