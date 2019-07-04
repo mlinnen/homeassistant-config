@@ -36,9 +36,9 @@
   origin: zone.home
   destination: zone.work
 
-- platform: hue
-  ip_address: 192.168.0.24
-  token: !secret hue_hub_password
+#- platform: hue
+#  ip_address: 192.168.0.24
+#  token: !secret hue_hub_password
 
 - platform: darksky
   api_key: !secret dark_sky_api_key
