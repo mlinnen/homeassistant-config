@@ -31,7 +31,7 @@ Family Room:
     - light.couch_lamp
     - light.family_floor_lamp
     - light.downstairs_hall_ceiling
-    - group.fireplace_lights
+    - light.fireplace_lights
     - media_player.family_room
     - media_player.kitchen_echo
     - switch.smart_switch_1
