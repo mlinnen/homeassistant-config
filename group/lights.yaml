@@ -3,7 +3,7 @@ Family Room Lights:
     - light.couch_lamp
     - light.family_floor_lamp
     - light.downstairs_hall_ceiling
-    - group.fireplace_lights
+    - light.fireplace_lights
 
 Downstairs Lights: 
   entities: 
@@ -28,17 +28,12 @@ Outside Lights:
   entities: 
     - switch.landscape_front_light
     - switch.landscape_back_light
-    - group.driveway_lights
+    - light.driveway
     - light.front_porch_ceiling
 
 Back Porch Lights:
   entities: 
     - light.back_porch_ceiling
-
-Driveway Lights:
-  entities: 
-    - light.driveway_left
-    - light.driveway_right
 
 Front Porch Lights: 
   entities: 

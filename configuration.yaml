@@ -13,6 +13,8 @@ homeassistant:
   # Customization file
   #customize: !include customize.yaml
 
+owntracks:
+
 mqtt:
   broker: 192.168.0.25
   username: !secret mqtt_user
@@ -48,6 +50,23 @@ mobile_app:
 config:
 
 cloud:
+  alexa:
+    filter:
+      include_entities:
+        - light.couch_lamp
+        - light.family_floor_lamp
+        - light.driveway
+        - light.back_porch_ceiling
+        - light.downstairs_hall_ceiling
+        - light.fireplace_lights
+        - light.master_bath_closet
+        - light.upstairs_hall_ceiling
+        - light.family_room
+        - light.master_sitting_ceiling
+    entity_config:
+      light.couch_lamp:
+        name: Couch Lamp
+        description: The light next to the couch in the family room  
 
 # Track the sun
 sun:
@@ -162,75 +181,6 @@ input_boolean:
     initial: off
     icon: mdi:toggle-switch
 
-#emulated_hue:
-#  expose_by_default: false
-#  exposed_domains:
-#    - light
-#    - switch
-#    - group
-#  entities:
-#    group.all_lights:
-#      name: "All Lights"
-#      hidden: false
-#    group.downstairs_lights:
-#      name: "Downstairs"
-#      hidden: false
-#    group.upstairs_lights:
-#      name: "Upstairs"
-#      hidden: false
-#    group.xmas_lights:
-#      name: "Xmas"
-#      hidden: false
-#    group.landscape_lights:
-#      name: "Landscape"
-#      hidden: false
-#    group.fireplace_lights:
-#      name: "Fireplace"
-#      hidden: false
-#    group.outside_lights:
-#      name: "Outside Lights"
-#      hidden: false
-#    group.back_porch_sensors:
-#      hidden: true
-#    group.family_room_lights:
-#      name: "Family Room Lights"
-#      hidden: false
-#    light.front_porch_level:
-#      name: "Front Porch"
-#      hidden: false
-#    light.master_sitting_level:
-#      name: "Master Sitting"
-#      hidden: false
-#    light.upstairs_hall_level:
-#      name: "Upstairs Hall"
-#      hidden: false
-#    light.downstairs_hall_level:
-#      name: "Downstairs Hall"
-#      hidden: false
-#    light.back_porch_level:
-#      name: "Backporch"
-#      hidden: false
-#    switch.landscape_back:
-#      name: "Landscape Back"
-#      hidden: false
-#    switch.landscape_front:
-#      name: "Landscape Front"
-#      hidden: false
-#    light.couch_lamp:
-#      hidden: true
-#    light.family_floor_lamp:
-#      hidden: true
-#    light.fireplace_left:
-#      hidden: true
-#    light.fireplace_right:
-#      hidden: true
-#    light.family_room:
-#      hidden: true
-#    group.family_room:
-#      hidden: true
-#    group.driveway_lights:
-#      hidden: true
-
 lovelace:
   mode: yaml
 
@@ -288,17 +238,23 @@ light:
     payload_on: "1"
     payload_off: "0"
     optimistic: false
-
-light:
   - platform: group
     name: "Fireplace Lights"
     entities:
       - light.fireplace_left
       - light.fireplace_right
+  - platform: group
+    name: "Driveway"
+    entities:
+      - light.driveway_left
+      - light.driveway_right
 
 hue:
   bridges:
     - host: 192.168.0.24
+      filename: phue.conf
+      allow_hue_groups: false
+      allow_unreachable: true
 
 group: !include_dir_merge_named group
 automation: !include automations.yaml
