@@ -36,6 +36,12 @@
   origin: zone.home
   destination: zone.work
 
+- platform: google_travel_time
+  name: Work to Home
+  api_key: !secret google_api_key
+  origin: zone.work
+  destination: zone.home
+
 #- platform: hue
 #  ip_address: 192.168.0.24
 #  token: !secret hue_hub_password
