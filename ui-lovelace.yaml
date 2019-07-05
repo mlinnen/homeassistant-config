@@ -4,6 +4,12 @@ resources:
 views:
   - title: Home
     icon: mdi:home
+    badges: 
+      - sensor.home_to_work
+      - sensor.work_to_home
+      - sensor.keezer_exterior_temperature
+      - sensor.single_garage_temperature
+      - sensor.keezer_average_temperature
     cards:
       - type: alarm-panel
         entity: alarm_control_panel.alarm_com
@@ -18,6 +24,37 @@ views:
           title: Garage Doors
           entities:
             - cover.single_garage_door
+      - type: entities
+        title: Family Room
+        entities:
+          - entity: light.couch_lamp
+          - entity: light.family_floor_lamp
+          - entity: light.fireplace_lights
+          - entity: light.downstairs_hall_ceiling
+      - type: entities
+        title: Master Bedroom
+        entities:
+          - entity: light.master_bath_closet
+          - entity: light.master_sitting_ceiling
+      - type: entities
+        title: Back Porch
+        entities:
+          - entity: light.back_porch_ceiling
+          - entity: switch.landscape_back_light
+      - type: entities
+        title: Upstairs
+        entities:
+          - entity: light.upstairs_hall_ceiling
+      - type: entities
+        title: Outside
+        entities:
+          - entity: light.driveway
+          - entity: light.front_porch_ceiling
+          - entity: switch.landscape_back_light
+          - entity: switch.landscape_front_light
+  - title: Lights
+    icon: mdi:lightbulb
+    cards:
       - type: vertical-stack
         cards:
           - type: light
@@ -57,29 +94,6 @@ views:
           name: Front
           tap_action:
             action: toggle
-
-  - title: Lights
-    icon: mdi:lightbulb
-    cards:
-      - type: entities
-        title: Master Bedroom
-        entities:
-        - entity: light.master_bath_closet
-        - entity: light.master_sitting_ceiling
-      - type: entities
-        title: Family Room
-        entities:
-        - entity: light.couch_lamp
-        - entity: light.downstairs_hall_ceiling
-        - entity: light.family_floor_lamp
-        - entity: light.fireplace_lights
-      - type: entities
-        title: Outside
-        entities:
-        - entity: light.driveway
-        - entity: light.front_porch_ceiling
-        - entity: switch.landscape_back_light
-        - entity: switch.landscape_front_light
   - title: Media
     icon: mdi:filmstrip
     cards:
