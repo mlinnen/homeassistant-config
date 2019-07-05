@@ -9,6 +9,15 @@ views:
         entity: alarm_control_panel.alarm_com
       - type: weather-forecast
         entity: weather.dark_sky
+      - type: conditional
+        conditions:
+          - entity: cover.single_garage_door
+            state_not: open
+        card: 
+          type: glance
+          title: Garage Doors
+          entities:
+            - cover.single_garage_door
       - type: vertical-stack
         cards:
           - type: light
