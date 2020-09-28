@@ -31,6 +31,8 @@ views:
           - entity: light.family_floor_lamp
           - entity: light.fireplace_lights
           - entity: light.downstairs_hall_ceiling
+          - entity: switch.jasco_smart_plug
+          - entity: switch.downstairs_hall_lamp
       - type: entities
         title: Master Bedroom
         entities:
@@ -41,10 +43,21 @@ views:
         entities:
           - entity: light.back_porch_ceiling
           - entity: switch.landscape_back_light
+          - entity: input_boolean.disable_back_porch_lights_automation
+            name: Disable Porch Motion
+            tap_action:
+              action: toggle
+      - type: entities
+        title: Office
+        entities:
+          - entity: group.signs
+
       - type: entities
         title: Upstairs
         entities:
           - entity: light.upstairs_hall_ceiling
+          - entity: group.signs
+          - entity: switch.attic_light
       - type: entities
         title: Outside
         entities:
@@ -52,6 +65,12 @@ views:
           - entity: light.front_porch_ceiling
           - entity: switch.landscape_back_light
           - entity: switch.landscape_front_light
+      - type: picture-entity
+        title: Backyard Camera
+        entity: camera.camera_1
+        camera_view: live
+        tap_action:
+          action: more-info
   - title: Lights
     icon: mdi:lightbulb
     cards:
@@ -65,6 +84,13 @@ views:
             entity: light.downstairs_hall_ceiling
           - type: light
             entity: light.fireplace_lights
+          - type: glance
+            title: Xmas Lights
+            entities: 
+            - entity: input_boolean.xmas_tree_override
+              name: Tree
+              tap_action:
+                action: toggle
       - type: vertical-stack
         cards:
           - type: light
@@ -138,3 +164,39 @@ views:
       - type: sensor
         entity: sensor.single_garage_humidity
         graph: line
+      - type: sensor
+        entity: sensor.beer_sign_01_temperature
+        graph: line
+      - type: sensor
+        entity: sensor.beer_sign_02_temperature
+        graph: line
+      - type: sensor
+        entity: sensor.beer_sign_01_humidity
+        graph: line
+      - type: sensor
+        entity: sensor.beer_sign_02_humidity
+        graph: line
+      - type: sensor
+        entity: sensor.attic_temperature
+        graph: line
+      - type: sensor
+        entity: sensor.attic_humidity
+        graph: line
+      - type: entities
+        title: Motion
+        entities:
+          - entity: binary_sensor.attic_motion_sensor
+          - entity: binary_sensor.keezer_motion
+          - entity: binary_sensor.master_bath_sensor_motion
+          - entity: binary_sensor.beer_sign_01_motion_sensor
+          - entity: binary_sensor.beer_sign_02_motion_sensor
+  - title: Settings
+    icon: mdi:settings
+    cards:
+      - type: glance
+        title: Automations on/off
+        entities:
+        - entity: input_boolean.disable_xmas_lights_automation
+          name: Xmas Lights
+          tap_action:
+            action: toggle

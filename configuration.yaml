@@ -19,6 +19,8 @@ mqtt:
   broker: 192.168.0.25
   username: !secret mqtt_user
   password: !secret mqtt_password
+  discovery: true
+  discovery_prefix: homeassistant 
 
 # Configure a default setup of Home Assistant (frontend, api, etc)
 #default_config:
@@ -46,6 +48,20 @@ logbook:
 map:
 
 mobile_app:
+
+stream:
+
+ffmpeg:
+
+camera:
+  - platform: generic
+    still_image_url: http://192.168.0.65/tmpfs/auto.jpg
+    stream_source: rtsp://192.168.0.65/12
+    name: Camera 1
+    verify_ssl: false
+    username: !secret camera_1_user
+    password: !secret camera_1_password
+    authentication: basic
 
 config:
 
@@ -116,7 +132,7 @@ tts:
   - platform: google_translate
 
 http:
-  base_url: http://192.168.0.56:8123
+  base_url: http://192.168.0.25:8123
 
 # Devices #
 sensor: !include sensors.yaml
@@ -133,7 +149,7 @@ speedtestdotnet:
 roku:
   - host: 192.168.0.210
   - host: 192.168.0.66
-  #- host: 192.168.0.96 
+  - host: 192.168.0.96 
 
 media_player:
   - platform: squeezebox
@@ -147,8 +163,20 @@ alexa_media:
       url: "amazon.com"
 
 input_boolean:
+  disable_xmas_lights_automation:
+    name: Disable the Xmas Lights
+    initial: off
+    icon: mdi:track-light
+  disable_back_porch_lights_automation:
+    name: Disable the Porch Lights
+    initial: off
+    icon: mdi:motion-sensor
   disable_outdoor_lights_automation:
     name: Disable the outdoor lights automation
+    initial: off
+    icon: mdi:track-light
+  xmas_tree_override:
+    name: Xmas Tree
     initial: off
     icon: mdi:track-light
   loop_halloween_video:
@@ -184,7 +212,7 @@ lovelace:
   mode: yaml
 
 influxdb:
-  host: 192.168.0.56
+  host: 192.168.0.25
   include:
     entities:
       - sensor.single_garage_humidity
@@ -196,7 +224,15 @@ influxdb:
       - sensor.master_bath_sensor_temperature
       - sensor.master_bath_sensor_light_level
       - binary_sensor.master_bath_sensor_motion
+      - binary_sensor.attic_motion_sensor
+      - binary_sensor.attic_node_status
+      - binary_sensor.beersign01_node_status
+      - binary_sensor.keezer_motion
       - binary_sensor.keezer_fan
+      - binary_sensor.keezer_compressor
+      - binary_sensor.beer_sign_01_motion_sensor
+      - binary_sensor.beer_sign_02_motion_sensor
+      - binary_sensor.remote_ui
       - light.keezer_light
       - sensor.home_to_work
       - sensor.keezer_bottom_temperature
@@ -204,8 +240,13 @@ influxdb:
       - sensor.keezer_exterior_temperature
       - sensor.keezer_average_temperature
       - binary_sensor.keezer_compressor
+      - sensor.beer_sign_01_temperature
+      - sensor.beer_sign_01_humidity
+      - sensor.beer_sign_02_temperature
+      - sensor.beer_sign_02_humidity
     domains:
       - sensor
+      - binary_sensor
   component_config_glob:
     sensor.*humidity:
       override_measurement: humidity

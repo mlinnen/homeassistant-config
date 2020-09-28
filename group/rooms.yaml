@@ -35,6 +35,7 @@ Family Room:
     - media_player.family_room
     - media_player.kitchen_echo
     - switch.smart_switch_1
+    - switch.jasco_smart_plug
 
 Kitchen: 
   entities: 

@@ -48,4 +48,9 @@ Landscape Lights:
 
 Xmas Lights: 
   entities: 
-    - switch.smart_switch_1
+    - switch.jasco_smart_plug
+
+Signs:
+  entities:
+    - light.beer_sign_01
+    - light.beer_sign_02
